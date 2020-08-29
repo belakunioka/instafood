@@ -1,0 +1,107 @@
+<html>
+
+<head>
+  <title>Instafood </title>
+  <meta http-equiv=”Content-Type” content=”text/html; charset="utf-8">
+  <meta http-equiv="Content-Language" content="pt-br">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <div class="hero">
+    <div class="nav-bar">
+      <div class="nav-logo">
+        <img src="logo.jpg" height="90" width="90">
+      </div>
+      <div class="nav-link">
+        <ul>
+          <a href="home.html">
+            <li>MENU PRINCIPAL</li>
+          </a>
+          <a href="guia.html">
+            <li>GUIA INICIANTES</li>
+          </a>
+          <a href="rsalgadas.html">
+            <li>RECEITAS SALGADAS</li>
+          </a>
+          <a href="rdoces.html">
+            <li>RECEITAS DOCES</li>
+          </a>
+        </ul>
+        <a href="inscreva.html"><button type="button" class="btn"> SE INSCREVA
+          </button></a>
+
+      </div>
+    </div>
+    <div class="banner-title">
+      <form method="POST" name="meu_form" id="user">
+
+        <h1 class="oi">Bem vindo</h1>
+        <h2>Se cadastre aqui para salvar, postar e fazer parte da nossa comunidade
+        </h2> <br>
+
+
+        <p class="nome">
+          <label for="nome"><i class="far fa-user"></i> Nome </label>
+          <input type="text" id="nomeid" placeholder="Seu nome" required="required" name="nome" />
+
+        </p><br>
+
+        <p>
+          <label for="email"><i class="far fa-envelope"></i> E-mail </label>
+          <input type="email" id="emailid" placeholder="seu@mail.com" name="email" />
+
+        </p><br>
+        <p>
+          <label for="password"><i class="fas fa-key"></i> Senha </label>
+          <input type="password" id="passwordid" placeholder="Sua senha" name="password" />
+
+        </p><br>
+
+        <p class="submit"><br>
+          <input type="submit" value="Enviar" />
+        </p>
+        <br>
+        <h4>Ja faz parte da nossa comunidade? <a href="usuario/login.html">Login</a></h4><br>
+      </form>
+      <script>
+
+        document.getElementById("user").addEventListener("submit", function (e) {
+          e.preventDefault()
+
+
+          let name = document.getElementById("nomeid").value;
+          let email = document.getElementById("emailid").value;
+          let password = document.getElementById("passwordid").value;
+
+          const form = {
+            name, email, password
+          }
+          console.log(JSON.stringify(form))
+
+          fetch("http://www.infood.me/api/v1/sessions/", {
+            method: "POST",
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(form),
+
+
+          })
+            .then(res => res.json())
+            .then(data => console.log("Cadastro realizado com sucesso", data))
+            .catch(err => console.log("Deu errado"))
+
+
+
+
+
+        })
+      </script>
+
+    </div>

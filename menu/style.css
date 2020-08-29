@@ -1,0 +1,487 @@
+*{
+    margin:0;
+    padding: 0;
+    font-family: sans-serif;
+}
+a:link, a:visited {
+    text-decoration: none;
+    color:#000;
+    }
+a:hover {
+        text-decoration: underline; 
+        color: #f00;
+        }
+a ::after{
+    text-decoration: underline;
+    color: red;
+}
+
+a:active {
+    text-decoration: none;
+    color:#000;
+	}
+.hero{
+    height: 100vh;
+    background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url(fundo.jpg);
+    background-position: center;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.nav-bar{
+    display: flex;
+    padding: 40px;
+}
+.nav-logo{
+    width: 40px;
+    height: 40px;
+    background-image: url(logo.jpg);
+     margin-left:60px;
+     margin-top: -30px;
+
+  
+}
+.nav-link{
+    flex:1;
+
+}
+.nav-link ul{
+    margin-left: 50px;
+    display: inline;
+}
+.nav-link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 25px;
+}
+
+.nav-link ul a{
+    color:#fff;
+    font-size: 13px;
+}
+.nav-link :hover{
+    text-decoration: underline;
+    color: red;
+}
+
+.btn{
+    padding: 10px 20px;
+    border: 0;
+    background: rgb(194, 26, 11);
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-link .btn{
+    float:right
+}
+
+.banner-title{
+    margin: 80px 130px;
+    color: #fff;
+}
+.banner-title h1{
+    font-size: 64px;
+    margin-bottom:30px;
+
+}
+.banner-title h1 span{
+    color: rgb(194, 26, 11);
+
+}
+.vertical-bar{
+    height: 100%;
+    background: #000;
+    top:0;
+    left: 0;
+    position: absolute;
+}
+.search-icon{
+    height: 60%;
+    width: 80px;
+}
+.search-icon .fa{
+    margin: 45px 23px;
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+.search-icon li{
+    margin: 45px 23px 45px 23px;
+    display: block;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+
+}
+.search-icon ul a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 11px;
+}
+.search-icon ul li :after{
+    content: " ";
+    width: 100%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: red;
+}
+.social-icons{
+    height: 35%;
+    width: 80px;
+    background:rgb(194, 26, 11);
+    text-align: center;
+    padding-top: 27%;
+    bottom: 0;
+    position: absolute;
+    
+}
+.social-icons .fa{
+    margin: 15px 23px;
+    display: block;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    color:#000;
+}
+.social-icons .fa{
+    margin: 15px 23px;
+    display: block;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    color:#000;
+}
+
+
+.ume{
+    font-size: 10px;
+    transform: rotate(270deg);
+   
+}
+/*PAGINA DE RECEITAS*/
+.nomedareceita{
+font-size: 25px;
+text-align: center;
+padding: 60px 30px;
+list-style: none;
+display: block;
+color:rgb(194, 26, 11);
+text-shadow: 2px 2px #000;
+}
+.descricao{
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+}
+.dificuldade{
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+    
+}
+.tempo{
+        color: rgb(194, 26, 11);
+        margin-left: 30px;
+        margin-right: 20px;
+        font-size: 20px;
+        text-shadow: 1px 1px #000;
+}
+.rendimento{
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+    
+}
+.equipamentos{
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+    
+}
+.ingredientes{
+        color: rgb(194, 26, 11);
+        margin-left: 30px;
+        margin-right: 20px;
+        font-size: 20px;
+        text-shadow: 1px 1px #000;
+       
+}
+.passos{
+        color: rgb(194, 26, 11);
+        margin-left: 30px;
+        margin-right: 20px;
+        font-size: 20px;
+        text-shadow: 1px 1px #000;
+             
+}
+.conteudo{
+ font-size: 16px;
+ text-align: left;
+}
+
+.opnioes{
+    text-align: center;
+    background:cornsilk;
+    box-shadow: 4px 4px #ffcc99;
+    text-shadow: 1px 1px #000;
+    align-items: center;
+    display: block;
+    float: right;
+    position: auto;
+    
+}
+/*PAGINA DA GUIA*/
+.guia{
+    font-size: 25px;
+    text-align: center;
+    padding: 60px 30px;
+    list-style: none;
+    display: block;
+    color:rgb(194, 26, 11) ;
+    background: #f6eedf;
+    width: 550px;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.20);
+    
+    }
+
+/*PAGINA DE INSCRICAO*/
+form {
+    font-size: 25px;
+    max-width: 500px;
+    color:rgb(194, 26, 11) ;
+    text-shadow: 1px 1px #000;
+    align-items: right;
+}
+ 
+.oi {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: rgb(194, 26, 11);
+    text-shadow: 5px 5px 5px black;
+    text-shadow: 1px 1px #000;
+}
+ 
+input, textarea {
+    width: 200px;
+    padding: 10px;
+    color: black;
+    margin-left: 20px;
+    border: 1px solid;
+}
+ 
+input:hover, textarea:hover, input:focus, textarea:focus {
+    border-color: #000;
+    background-color: rgb(194, 26, 11);
+    color: black;
+    font-weight: bold;
+   
+}
+ 
+.submit input {
+    padding: 10px 20px;
+    border: 0;
+    background: rgb(194, 26, 11);
+    font-weight: bold;
+    cursor: poinxter;
+}
+ 
+textarea {
+    width: 400px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 400px;
+}
+ 
+form label {
+    margin-left: 20px;
+    color: rgb(194, 26, 11); 
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+}
+.cozinharinscrever{
+    float:right;
+}
+/*INDICE DE RECEITAS*/
+.vegana{
+    font-size: 25px;
+    text-align: center;
+    list-style: none;
+    display: block;
+    color:rgb(194, 26, 11) ;
+    background: #f6eedf;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.20);
+    margin: 50px 50px 50px 50px;
+    padding: 10px 10px 20px 10px;
+  
+    
+    }
+.vegana li{
+    font-size: 20px;
+    color: white;
+    padding: 25px 25px 25px 25px;
+    margin: 50px 50px 50px 50px;
+    list-style: none;
+    display: inline;
+
+}
+
+.vegana h3{
+    color: rgb(194, 26, 11);
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+    margin-bottom: 20px;
+    font-size:45px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.lactose{
+    font-size: 25px;
+    text-align: center;
+    list-style: none;
+    display: block;
+    color:rgb(194, 26, 11) ;
+    background: #f6eedf;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.20);
+    margin: 50px 50px 50px 50px;
+    padding: 10px 10px 20px 10px;
+   
+
+}
+.lactose li{
+    font-size: 20px;
+    color: white;
+    padding: 25px 25px 25px 25px;
+    margin: 50px 50px 50px 50px;
+    list-style: none;
+    display: inline;
+}
+
+.lactose h3{
+    color: rgb(194, 26, 11);
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+    margin-bottom: 20px;
+    font-size:45px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+.gluten{
+    font-size: 25px;
+    text-align: center;
+    list-style: none;
+    display: block;
+    color:rgb(194, 26, 11) ;
+    background: #f6eedf;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.20);
+    margin: 50px 50px 50px 50px;
+    padding: 10px 10px 20px 10px;
+    }
+.gluten li{
+    font-size: 20px;
+    color: white;
+    padding: 25px 25px 25px 25px;
+    margin: 50px 50px 50px 50px;
+    list-style: none;
+    display: inline;
+}
+
+.gluten h3{
+    color: rgb(194, 26, 11);
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+    margin-bottom: 20px;
+    font-size:45px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+.fatu{
+    font-size: 25px;
+    text-align: center;
+    list-style: none;
+    display: block;
+    color:rgb(194, 26, 11) ;
+    background: #f6eedf;
+    border-radius: 8px;
+    box-shadow: 0 6px 10px 0 rgba(0,0,0,0.20);
+    margin: 50px 50px 50px 50px;
+    padding: 10px 10px 20px 10px;
+    }
+.fatu li{
+    font-size: 20px;
+    color: white;
+    padding: 25px 25px 25px 25px;
+    margin: 50px 50px 50px 50px;
+    list-style: none;
+    display: inline;
+    
+}
+
+.fatu h3{
+    color: rgb(194, 26, 11);
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+    margin-bottom: 20px;
+    font-size:45px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+/* Usuario*/
+.menuvertical{
+    height: 100%;
+    background:#000;
+    top:0;
+    left: 0;
+    position: absolute;
+   
+}
+
+.barramenu li{
+    margin: 45px 23px 45px 23px;
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+
+
+}
+.barramenu ul a{
+    color:#fff;
+    text-decoration: none;
+}
+.barramenu ul li :after{
+    content: " ";
+    width: 100%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: red;
+}
+.dentrodomenu{
+    text-align:right;
+    
+    
+}
