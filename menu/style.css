@@ -9,6 +9,7 @@
     color: rgb(194, 26, 11);
     text-transform: uppercase;
     font-family: "Hind", sans-serif;
+    
   }
   h1 {
     font-size: 3rem;
@@ -47,19 +48,17 @@ a:active {
     background-size: cover;
     overflow-x: hidden;
 }
+
+
+#logo{
+    width: 200px;
+    margin: 10px 0px 10px 10px;
+}
 .nav-bar{
     display: flex;
     padding: 40px;
 }
-.nav-logo{
-    width: 40px;
-    height: 40px;
-    background-image: url(logo.jpg);
-     margin-left:60px;
-     margin-top: -30px;
 
-  
-}
 .nav-link{
     flex:1;
 
@@ -83,14 +82,14 @@ a:active {
     color: red;
 }
 
-.btn{
+.btn-vermelho{
     padding: 10px 20px;
     border: 0;
     background: rgb(194, 26, 11);
     font-weight: bold;
     cursor: pointer;
 }
-.nav-link .btn{
+.nav-link .btn-vermelho{
     float:right
 }
 
@@ -343,8 +342,8 @@ form label {
 .cozinharinscrever{
     float:right;
 }
-/*INDICE DE RECEITAS*/
-.boxdofiltro{
+/*APOS BUSCA DE RECEITAS*/
+#boxdofiltro{
     padding: 10px 10px 10px 10px;
     height: 50px;
     outline: none;
@@ -361,7 +360,7 @@ form label {
     
     
     }
-/* Customize the label (the container) */
+
 .container {
     display: block;
     position: relative;
@@ -377,17 +376,17 @@ form label {
     
   }
   
-  /* Hide the browser's default checkbox */
   .container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
+    float: right;
     
   }
   
-  /* Create a custom checkbox */
+
   .checkmark {
     position: absolute;
     top: 0;
@@ -399,29 +398,29 @@ form label {
     
   }
   
-  /* On mouse-over, add a grey background color */
+
   .container:hover input ~ .checkmark {
     background-color: #ccc;
   }
   
-  /* When the checkbox is checked, add a blue background */
+
   .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: #158046;
   }
   
-  /* Create the checkmark/indicator (hidden when not checked) */
+
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
   
-  /* Show the checkmark when checked */
+  
   .container input:checked ~ .checkmark:after {
     display: block;
   }
   
-  /* Style the checkmark/indicator */
+  
   .container .checkmark:after {
     left: 9px;
     top: 5px;
@@ -437,19 +436,14 @@ form label {
   #frame{
     width:200px;
     height:100px;
-    background:black;
-    margin:10px 10px 10px 10px;
+    background:white;
+    margin:5px 5px 5px 5px;
     float: right;
+    border-radius: 5px;
+    text-align: center;
   
     
  
     
 
 }
-.esquerda{
-    float: right;
-    margin-right: 25px;
-    margin-top:0;
-}
-
-
