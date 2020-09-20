@@ -1,0 +1,399 @@
+.styling {
+    font-weight: 50;
+    color: rgb(194, 26, 11);
+    text-transform: uppercase;
+    font-family: "Hind", sans-serif;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 50;
+
+    color: #fff;
+    font-family: "Hind", sans-serif;
+}
+h2 {
+    color: #fff;
+}
+h4 {
+    color: rgb(194, 26, 11);
+}
+a:link,
+a:visited {
+    text-decoration: none;
+    color: #fff;
+}
+a:hover {
+    text-decoration: underline;
+    color: #f00;
+}
+a ::after {
+    color: red;
+}
+
+a:active {
+    text-decoration: none;
+    color: #000;
+}
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/fundo.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#logo {
+    width: 200px;
+    margin: 10px 0px 10px 10px;
+}
+
+.nav-bar {
+    position: fixed;
+    width: calc(100vw - 80px);
+    margin-left: 80px;
+}
+.nav-link{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.nav-link ul{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-link ul li {
+    list-style: none;
+}
+
+.btn-vermelho {
+    padding: 10px 20px;
+    border: 0;
+    background: rgb(194, 26, 11);
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-link .btn-vermelho {
+    float: right;
+}
+
+.banner-title {
+    margin-left: 80px;
+    color: #fff;
+}
+.banner-title h1 {
+    font-size: 64px;
+    margin-bottom: 30px;
+}
+.banner-title h1 span {
+    color: rgb(194, 26, 11);
+}
+.search-icon {
+    height: 60%;
+    width: 80px;
+}
+.search-icon .fa {
+    margin: 45px 23px;
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+}
+.search-icon li {
+    margin: 45px 23px 45px 23px;
+    display: block;
+    color: #fff;
+    font-size: 10px;
+    cursor: pointer;
+    list-style: none;
+    text-align: center;
+}
+.search-icon ul a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+}
+.search-icon ul li :after {
+    content: " ";
+    width: 100%;
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: red;
+}
+.social-icons {
+    height: 35%;
+    width: 80px;
+    background: rgb(194, 26, 11);
+    text-align: center;
+    padding-top: 27%;
+    bottom: 0;
+    position: absolute;
+}
+.social-icons .fa {
+    margin: 15px 23px;
+    display: block;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #000;
+}
+.social-icons .fa {
+    margin: 15px 23px;
+    display: block;
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #000;
+}
+
+.ume {
+    font-size: 10px;
+    transform: rotate(270deg);
+}
+/*PAGINA DE RECEITAS*/
+.nomedareceita {
+    font-size: 25px;
+    text-align: center;
+    padding: 60px 30px;
+    list-style: none;
+    display: block;
+    color: rgb(194, 26, 11);
+    text-shadow: 2px 2px #000;
+}
+.descricao {
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+}
+.dificuldade {
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+}
+.tempo {
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+}
+.rendimento {
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+}
+.equipamentos {
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+}
+.ingredientes {
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+}
+.passos {
+    color: rgb(194, 26, 11);
+    margin-left: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    text-shadow: 1px 1px #000;
+}
+.conteudo {
+    font-size: 16px;
+    text-align: left;
+}
+
+.opnioes {
+    text-align: center;
+    background: cornsilk;
+    box-shadow: 4px 4px #ffcc99;
+    text-shadow: 1px 1px #000;
+    align-items: center;
+    display: block;
+    float: right;
+    position: auto;
+}
+/*PAGINA DA GUIA*/
+.guia {
+    font-size: 25px;
+    text-align: center;
+    padding: 60px 30px;
+    list-style: none;
+    display: block;
+    color: rgb(194, 26, 11);
+    background: #f6eedf;
+    width: 550px;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 15px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*PAGINA DE INSCRICAO*/
+form {
+    font-size: 25px;
+    max-width: 500px;
+    color: rgb(194, 26, 11);
+    text-shadow: 1px 1px #000;
+    align-items: right;
+}
+
+.oi {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: rgb(194, 26, 11);
+    text-shadow: 5px 5px 5px black;
+    text-shadow: 1px 1px #000;
+}
+
+input,
+textarea {
+    padding: 0.5 rem 1 rem;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    width: 350px;
+    margin: 0.25rem;
+    border-radius: 25px;
+    font-size: 1.15rem;
+    transition: 0.5s;
+    text-align: center;
+}
+
+input:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    border-color: #000;
+    background-color: rgb(194, 26, 11);
+    color: black;
+    font-weight: bold;
+}
+
+.submit input {
+    padding: 10px 20px;
+    border: 0;
+    background: rgb(194, 26, 11);
+    font-weight: bold;
+    cursor: poinxter;
+}
+
+textarea {
+    width: 400px;
+    height: 120px;
+    line-height: 20px;
+    max-width: 400px;
+}
+
+form label {
+    margin-left: 20px;
+    color: rgb(194, 26, 11);
+    font-weight: bold;
+    text-shadow: 1px 1px #000;
+}
+.cozinharinscrever {
+    float: right;
+}
+/*APOS BUSCA DE RECEITAS*/
+#boxdofiltro {
+    padding: 10px 10px 10px 10px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    width: 250px;
+    margin: 1rem 1rem 1rem 9rem;
+    border-radius: 25px;
+    font-size: 1.15rem;
+    transition: 0.5s;
+    text-align: center;
+    flex-direction: row;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    float: right;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #158046;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+#frame {
+    width: 200px;
+    height: 100px;
+    background: white;
+    margin: 5px 5px 5px 5px;
+    float: right;
+    border-radius: 5px;
+    text-align: center;
+}
