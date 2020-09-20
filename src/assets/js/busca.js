@@ -1,4 +1,3 @@
-import "./busca.css";
 const addButton = document.querySelector(".addButton");
 var input = document.querySelector(".input");
 const container = document.querySelector(".container");

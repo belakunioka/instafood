@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/style.css">
   <!--Custom Stylesheets-->
   <link rel="stylesheet" href="/src/assets/css/style.css">
+  <link rel="stylesheet" href="/src/assets/css/busca.css">
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -23,21 +24,28 @@
   <nav></nav>
   <div id="sidenav"></div>
   <!--Page content-->
-  <div class="hero">
-    <main>
-      <div class="banner-title">
-        <h1><span class="styling"> Insta</span>food<br>
-          o que tem na sua cozinha?</h1>
-        <a href="/busca"><button type="button" class="btn-vermelho" onclick="pesquisar()">COZINHAR</button></a>
-        <br>
-        <br>
-        <h4>Já faz parte da nossa comunidade? <a href="/login">Login</a></h4>
+  <main>
+    <h1><span class="styling"> Insta</span>food</h1>
+    <h2>O que tem na sua cozinha?</h2>
+    <div class="input_div">
+      <input class="input" type="text" placeholder=" coloque os ingredientes aqui..." />
+      <button class="addButton"><i class="fas fa-plus"></i></button>
+    </div>
+    <div class="container">
+      <div class="item">
       </div>
-    </main>
-  </div>
+    </div>
+    <a href="/resultado">
+      <button type="button" class="btnbusca">
+        <bold>EXIBIR RECEITAS</bold>
+      </button>
+    </a>
+    </div>
+  </main>
   <!--Page content end-->
   <!--Javascript Sources-->
   <script src="/script.js"></script>
+  <script src="/src/assets/js/busca.js"></script>
 </body>
 
 </html>
