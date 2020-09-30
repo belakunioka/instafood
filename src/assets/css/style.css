@@ -4,28 +4,33 @@
     text-transform: uppercase;
     font-family: "Hind", sans-serif;
 }
+
 h1 {
     font-size: 3rem;
     font-weight: 50;
-
     color: #fff;
     font-family: "Hind", sans-serif;
 }
+
 h2 {
     color: #fff;
 }
+
 h4 {
     color: rgb(194, 26, 11);
 }
+
 a:link,
 a:visited {
     text-decoration: none;
     color: #fff;
 }
+
 a:hover {
     text-decoration: underline;
     color: #f00;
 }
+
 a ::after {
     color: red;
 }
@@ -43,77 +48,99 @@ a:active {
 }
 
 #logo {
-    width: 200px; /*mudar*/
+    width: 200px;
+    /*mudar*/
     margin: 10px 0px 10px 10px;
 }
 
 .nav-bar {
     position: fixed;
-    width: calc(100vw - 80px); /*mudar*/
-    margin-left: 80px; /*mudar*/
+    width: calc(100vw - 80px);
+    /*mudar*/
+    margin-left: 80px;
+    /*mudar*/
 }
-.nav-link{
+
+.nav-link {
     display: flex;
     align-items: center;
     width: 100%;
 }
-.nav-link ul{
+
+.nav-link ul {
     width: 90%;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
 .nav-link ul li {
     list-style: none;
 }
 
 .btn-vermelho {
-    padding: 10px 20px; /*mudar*/
+    padding: 10px 20px;
+    /*mudar*/
     border: 0;
     background: rgb(194, 26, 11);
     font-weight: bold;
     cursor: pointer;
+    border-radius: 25px;
+    color: #fff;
 }
+
 .nav-link .btn-vermelho {
     float: right;
 }
 
 .banner-title {
-    margin-left: 80px; /*mudar*/
+    margin-left: 80px;
+    /*mudar*/
     color: #fff;
 }
+
 .banner-title h1 {
-    font-size: 64px; 
-    margin-bottom: 30px; /*mudar*/
+    font-size: 64px;
+    margin-bottom: 30px;
+    /*mudar*/
 }
+
 .banner-title h1 span {
     color: rgb(194, 26, 11);
 }
+
 .search-icon {
     height: 60%;
-    width: 80px; /*mudar*/
+    width: 80px;
+    /*mudar*/
 }
+
 .search-icon .fa {
-    margin: 45px 23px; /*mudar*/
+    margin: 45px 23px;
+    /*mudar*/
     display: block;
     color: #fff;
     font-size: 30px;
     cursor: pointer;
 }
+
 .search-icon li {
-    margin: 45px 23px 45px 23px; /*mudar*/
+    margin: 45px 23px 45px 23px;
+    /*mudar*/
     display: block;
     color: #fff;
-    font-size: 10px; 
+    font-size: 10px;
     cursor: pointer;
     list-style: none;
     text-align: center;
 }
+
 .search-icon ul a {
     color: #fff;
     text-decoration: none;
-    font-size: 11px; 
+    font-size: 11px;
 }
+
 .search-icon ul li :after {
     content: " ";
     width: 100%;
@@ -122,26 +149,33 @@ a:active {
     margin: auto;
     background: red;
 }
+
 .social-icons {
     height: 35%;
-    width: 80px; /*mudar*/
+    width: 80px;
+    /*mudar*/
     background: rgb(194, 26, 11);
     text-align: center;
     padding-top: 27%;
     bottom: 0;
     position: absolute;
 }
+
 .social-icons .fa {
-    margin: 15px 23px; /*mudar*/
+    margin: 15px 23px;
+    /*mudar*/
     display: block;
-    padding: 8px; /*mudar*/
+    padding: 8px;
+    /*mudar*/
     border: 1px solid #000;
     border-radius: 50%;
     cursor: pointer;
     color: #000;
 }
+
 .social-icons .fa {
-    margin: 15px 23px; /*mudar*/
+    margin: 15px 23px;
+    /*mudar*/
     display: block;
     padding: 8px;
     border: 1px solid #000;
@@ -154,65 +188,91 @@ a:active {
     font-size: 10px;
     transform: rotate(270deg);
 }
+
+
 /*PAGINA DE RECEITAS*/
+
 .nomedareceita {
     font-size: 25px;
     text-align: center;
-    padding: 60px 30px; /*mudar*/
+    padding: 60px 30px;
+    /*mudar*/
     list-style: none;
     display: block;
     color: rgb(194, 26, 11);
     text-shadow: 2px 2px #000;
 }
+
 .descricao {
     color: rgb(194, 26, 11);
-    margin-left: 30px; /*mudar*/
-    margin-right: 20px; /*mudar*/
+    margin-left: 30px;
+    /*mudar*/
+    margin-right: 20px;
+    /*mudar*/
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
+
 .dificuldade {
     color: rgb(194, 26, 11);
-    margin-left: 30px; /*mudar*/
-    margin-right: 20px; /*mudar*/
+    margin-left: 30px;
+    /*mudar*/
+    margin-right: 20px;
+    /*mudar*/
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
+
 .tempo {
     color: rgb(194, 26, 11);
-    margin-left: 30px; /*mudar*/
-    margin-right: 20px; /*mudar*/
+    margin-left: 30px;
+    /*mudar*/
+    margin-right: 20px;
+    /*mudar*/
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
+
 .rendimento {
     color: rgb(194, 26, 11);
-    margin-left: 30px; /*mudar*/
-    margin-right: 20px; /*mudar*/
+    margin-left: 30px;
+    /*mudar*/
+    margin-right: 20px;
+    /*mudar*/
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
+
 .equipamentos {
     color: rgb(194, 26, 11);
-    margin-left: 30px; /*mudar*/
-    margin-right: 20px; /*mudar*/
+    margin-left: 30px;
+    /*mudar*/
+    margin-right: 20px;
+    /*mudar*/
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
+
 .ingredientes {
     color: rgb(194, 26, 11);
-    margin-left: 30px; /*mudar*/
-    margin-right: 20px; /*mudar*/
+    margin-left: 30px;
+    /*mudar*/
+    margin-right: 20px;
+    /*mudar*/
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
+
 .passos {
     color: rgb(194, 26, 11);
-    margin-left: 30px; /*mudar*/
-    margin-right: 20px; /*mudar*/
+    margin-left: 30px;
+    /*mudar*/
+    margin-right: 20px;
+    /*mudar*/
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
+
 .conteudo {
     font-size: 16px;
     text-align: left;
@@ -228,34 +288,46 @@ a:active {
     float: right;
     position: auto;
 }
+
+
 /*PAGINA DA GUIA*/
+
 .guia {
     font-size: 25px;
     text-align: center;
-    padding: 60px 30px; /*mudar*/
+    padding: 60px 30px;
+    /*mudar*/
     list-style: none;
     display: block;
     color: rgb(194, 26, 11);
     background: #f6eedf;
-    width: 550px; /*mudar*/
+    width: 550px;
+    /*mudar*/
     border-radius: 8px;
-    padding: 20px; /*mudar*/
-    margin-top: 15px; /*mudar*/
+    padding: 20px;
+    /*mudar*/
+    margin-top: 15px;
+    /*mudar*/
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
+
 /*PAGINA DE INSCRICAO*/
+
 form {
-    font-size: 25px; 
-    max-width: 500px; /*mudar*/
+    font-size: 25px;
+    max-width: 500px;
+    /*mudar*/
     color: rgb(194, 26, 11);
     text-shadow: 1px 1px #000;
     align-items: right;
 }
 
 .oi {
-    margin-bottom: 20px; /*mudar*/
-    margin-left: 20px; /*mudar*/
+    margin-bottom: 20px;
+    /*mudar*/
+    margin-left: 20px;
+    /*mudar*/
     color: rgb(194, 26, 11);
     text-shadow: 5px 5px 5px black;
     text-shadow: 1px 1px #000;
@@ -264,13 +336,15 @@ form {
 input,
 textarea {
     padding: 0.5 rem 1 rem;
-    height: 50px; /*mudar*/
+    height: 50px;
+    /*mudar*/
     outline: none;
     border: none;
     background-color: #fff;
-    width: 350px; /*mudar*/
+    width: 350px;
+    /*mudar*/
     margin: 0.25rem;
-    border-radius: 25px; 
+    border-radius: 25px;
     font-size: 1.15rem;
     transition: 0.5s;
     text-align: center;
@@ -287,7 +361,8 @@ textarea:focus {
 }
 
 .submit input {
-    padding: 10px 20px; /*mudar*/
+    padding: 10px 20px;
+    /*mudar*/
     border: 0;
     background: rgb(194, 26, 11);
     font-weight: bold;
@@ -295,29 +370,41 @@ textarea:focus {
 }
 
 textarea {
-    width: 400px; /*mudar*/
-    height: 120px; /*mudar*/
-    line-height: 20px; /*mudar (n sei ao certo)*/
-    max-width: 400px; /*mudar*/
+    width: 400px;
+    /*mudar*/
+    height: 120px;
+    /*mudar*/
+    line-height: 20px;
+    /*mudar (n sei ao certo)*/
+    max-width: 400px;
+    /*mudar*/
 }
 
 form label {
-    margin-left: 20px; /*mudar*/
+    margin-left: 20px;
+    /*mudar*/
     color: rgb(194, 26, 11);
     font-weight: bold;
     text-shadow: 1px 1px #000;
 }
+
 .cozinharinscrever {
     float: right;
 }
+
+
 /*APOS BUSCA DE RECEITAS*/
+
 #boxdofiltro {
-    padding: 10px 10px 10px 10px; /*mudar*/
-    height: 50px; /*mudar*/
+    padding: 10px 10px 10px 10px;
+    /*mudar*/
+    height: 50px;
+    /*mudar*/
     outline: none;
     border: none;
     background-color: #fff;
-    width: 250px; /*mudar*/
+    width: 250px;
+    /*mudar*/
     margin: 1rem 1rem 1rem 9rem;
     border-radius: 25px;
     font-size: 1.15rem;
@@ -329,8 +416,10 @@ form label {
 .container {
     display: block;
     position: relative;
-    padding-left: 25px; /*mudar*/
-    margin-bottom: 12px; /*mudar*/
+    padding-left: 25px;
+    /*mudar*/
+    margin-bottom: 12px;
+    /*mudar*/
     cursor: pointer;
     font-size: 22px;
     -webkit-user-select: none;
@@ -352,17 +441,19 @@ form label {
     position: absolute;
     top: 0;
     left: 0;
-    height: 25px; /*mudar*/
-    width: 25px; /*mudar*/
+    height: 25px;
+    /*mudar*/
+    width: 25px;
+    /*mudar*/
     background-color: #eee;
     border-radius: 50%;
 }
 
-.container:hover input ~ .checkmark {
+.container:hover input~.checkmark {
     background-color: #ccc;
 }
 
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
     background-color: #158046;
 }
 
@@ -372,15 +463,19 @@ form label {
     display: none;
 }
 
-.container input:checked ~ .checkmark:after {
+.container input:checked~.checkmark:after {
     display: block;
 }
 
 .container .checkmark:after {
-    left: 9px; /*mudar*/
-    top: 5px; /*mudar*/
-    width: 5px; /*mudar*/
-    height: 10px; /*mudar*/
+    left: 9px;
+    /*mudar*/
+    top: 5px;
+    /*mudar*/
+    width: 5px;
+    /*mudar*/
+    height: 10px;
+    /*mudar*/
     border: solid white;
     border-width: 0 3px 3px 0;
     -webkit-transform: rotate(45deg);
@@ -389,10 +484,13 @@ form label {
 }
 
 #frame {
-    width: 200px; /*mudar*/
-    height: 100px; /*mudar*/
+    width: 200px;
+    /*mudar*/
+    height: 100px;
+    /*mudar*/
     background: white;
-    margin: 5px 5px 5px 5px; /*mudar*/
+    margin: 5px 5px 5px 5px;
+    /*mudar*/
     float: right;
     border-radius: 5px;
     text-align: center;
