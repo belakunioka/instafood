@@ -36,11 +36,11 @@ h2 {
 }
 .input_div .input {
   padding: 0.5 rem 1 rem;
-  height: 50px;
+  height: 50px; /*mudar*/
   outline: none;
   border: none;
   background-color: #fff;
-  width: 350px;
+  width: 350px; /*mudar*/
   margin: 0.25rem;
   border-radius: 25px;
   font-size: 1.15rem;
@@ -49,9 +49,9 @@ h2 {
 }
 
 .addButton {
-  height: 50px;
-  width: 50px;
-  border-radius: 25px;
+  height: 50px; /*mudar*/
+  width: 50px; /*mudar*/
+  border-radius: 25px; 
   outline: none;
   border: none;
   color: #fff;
@@ -83,14 +83,14 @@ h2 {
   outline: none;
   color: #fff;
   border: none;
-  width: 350px;
+  width: 350px; /*mudar*/
   font-size: 1.4rem;
 }
 
 .removeButton {
-  height: 25px;
-  width: 25px;
-  border-radius: 25px;
+  height: 25px; /*mudar*/
+  width: 25px; /*mudar*/
+  border-radius: 25px; 
   outline: none;
   border: none;
   color: #fff;
@@ -99,7 +99,7 @@ h2 {
   cursor: pointer;
 }
 .btnbusca{
-  padding: 10px 20px;
+  padding: 10px 20px; /*mudar*/
   border: 0;
   background: rgb(194, 26, 11);
   font-weight: bold;
