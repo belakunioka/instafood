@@ -49,7 +49,7 @@ a:active {
 
 .nav-bar {
     position: fixed;
-    width: calc(100vw - 80px); /*mudar*/
+    width: calc(100vw - 80px); /*mudar (n sei)*/
     margin-left: 80px; /*mudar*/
 }
 .nav-link{
