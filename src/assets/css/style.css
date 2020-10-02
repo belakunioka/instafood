@@ -413,7 +413,7 @@ form label {
     flex-direction: row;
 }
 
-.container {
+.custom-container {
     display: block;
     position: relative;
     padding-left: 25px;
@@ -428,7 +428,7 @@ form label {
     user-select: none;
 }
 
-.container input {
+.custom-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
@@ -449,11 +449,11 @@ form label {
     border-radius: 50%;
 }
 
-.container:hover input~.checkmark {
+.custom-container:hover input~.checkmark {
     background-color: #ccc;
 }
 
-.container input:checked~.checkmark {
+.custom-container input:checked~.checkmark {
     background-color: #158046;
 }
 
@@ -463,11 +463,11 @@ form label {
     display: none;
 }
 
-.container input:checked~.checkmark:after {
+.custom-container input:checked~.checkmark:after {
     display: block;
 }
 
-.container .checkmark:after {
+.custom-container .checkmark:after {
     left: 9px;
     /*mudar*/
     top: 5px;

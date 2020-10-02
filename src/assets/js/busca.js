@@ -1,6 +1,6 @@
 const addButton = document.querySelector(".addButton");
 var input = document.querySelector(".input");
-const container = document.querySelector(".container");
+const customContainer = document.querySelector(".custom-container");
 
 class item {
     constructor(itemName) {
@@ -27,7 +27,7 @@ class item {
 
 
 
-        container.appendChild(itemBox);
+        customContainer.appendChild(itemBox);
 
         itemBox.appendChild(input);
         itemBox.appendChild(editButton);
@@ -42,7 +42,7 @@ class item {
         input.disabled = !input.disabled;
     }
     remove(item) {
-        container.removeChild(item);
+        customContainer.removeChild(item);
     }
 }
 function check() {
