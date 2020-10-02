@@ -1,7 +1,7 @@
 $("body").prepend('<div class="nav-bar">' +
     '<div class="nav-link">' +
     ' <ul>' +
-    '   <li><img src="/src/assets/img/logo.png" id="logo"></li>' +
+    '   <li><img src="../src/assets/img/logo.png" id="logo"></li>' +
     '   <a href="/">' +
     '     <li>MENU PRINCIPAL</li>' +
     '   </a>' +
