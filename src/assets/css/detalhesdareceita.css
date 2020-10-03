@@ -1,10 +1,11 @@
 #favoritar {
 	width: 40px;
 	height: 40px;
+	background-color: transparent;
 }
 
-#titulo-receita {
-	width: 40%;
+#div-titulo-receita {
+	width: 35%;
 	
 	font-family: Roboto;
 	font-size: 36px;
@@ -15,35 +16,42 @@
 	border-radius: 35px;
 }
 
-#imagem-receita {
-	width: 500px;
-	height: 350px;
+#imagemReceita {
+	width: 45%;
+	height: 85%;
 	
 	filter: drop-shadow(7px 9px 4px rgba(0, 0, 0, 0.3));
 	border-radius: 5px;
 }
 
 #informacoes-receita {
-	width: 25em;
-	height: 4.5em;
-	margin-right: 10px;
+	width: 44%;
+	height: 7em;
 	background: #CE2421;
 	border-radius: 35px;
 }
 
+.custom-pl {
+	padding-left: 0;
+}
+
+.line {
+	border-left: 2px solid #101010;
+	height: 95px;
+}
+
 .icon-informacoes {
-	width: 50px;
+	width: 45px;
 }
 
 .icon-informacoes-user {
-	width: 40px;
+	width: 35px;
 }
 
 .text-informacoes {
 	font-family: Roboto;
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 15px;
-	text-align: center;
 	color: #FFFFFF;
 }
 
