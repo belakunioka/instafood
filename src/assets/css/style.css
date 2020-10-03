@@ -45,6 +45,8 @@ a:active {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(../img/fundo.jpg);
     background-position: center;
     background-size: cover;
+    max-height: 100vh;
+    overflow-y: scroll;
 }
 
 #logo {
@@ -182,6 +184,10 @@ a:active {
     border-radius: 50%;
     cursor: pointer;
     color: #000;
+}
+
+.icon-social {
+    padding-top: 0.5em;
 }
 
 .ume {

@@ -31,10 +31,10 @@ $("body").prepend("<div class='vertical-bar'>" +
     "</div>" +
     "<div class='social-icons'>" +
     "<ul>" +
-    "<li><i class='fab fa-facebook-f fa-2x'></i></li>" +
-    "<li><i href='/' class='fab fa-twitter fa-2x'></i></li>" +
-    "<li><i href='/' class='fab fa-pinterest fa-2x'></i></li>" +
-    "<li><i href='/' class='fab fa-instagram fa-2x'></i></li>" +
+    "<li><i class='fab fa-facebook-f fa-2x icon-social'></i></li>" +
+    "<li><i href='/' class='fab fa-twitter fa-2x icon-social'></i></li>" +
+    "<li><i href='/' class='fab fa-pinterest fa-2x icon-social'></i></li>" +
+    "<li><i href='/' class='fab fa-instagram fa-2x icon-social'></i></li>" +
     "</ul>" +
     "</div>" +
     "</div>")
