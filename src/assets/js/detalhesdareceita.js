@@ -1,6 +1,6 @@
 const favoritar = document.getElementById('favoritar');
-let coracaoPreenchido = "..\\src\\assets\\img\\icons\\coração preenchido.png";
-let coracaoVazio = "..\\src\\assets\\img\\icons\\coração vazio.png";
+let coracaoPreenchido = "..\\assets\\img\\icons\\coração preenchido.png";
+let coracaoVazio = "..\\assets\\img\\icons\\coração vazio.png";
 
 favoritar.addEventListener("click", () => {
     if(favoritar.getAttribute("src") == coracaoVazio){

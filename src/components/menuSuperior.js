@@ -1,7 +1,7 @@
 $("body").prepend('<div class="nav-bar">' +
 '<div class="nav-link">'+
 ' <ul>'+
-'   <li><img src="/src/assets/img/logo.png" id="logo"></li>' +
+'   <li><img src="../assets/img/logo.png" id="logo"></li>' +
 '   <a href="/">'+
 '     <li>MENU PRINCIPAL</li>' +
 '   </a>'+
@@ -12,6 +12,6 @@ $("body").prepend('<div class="nav-bar">' +
 '     <li>RECEITAS DOCES</li>'+
 '   </a>'+
 ' </ul>'+
- '<a href="/"><button type="button" class="btn-vermelho"> SE INSCREVA </button></a>'+
+ '<a href="src/templates/login.html" target="_self"><button type="button" class="btn-vermelho"> SE INSCREVA </button></a>'+
   '</div>'+
 '</div>')
