@@ -1,4 +1,16 @@
 $("body").prepend(
+    '<div class="nav-bar">' +
+      '<div class="nav-link">'+
+          '<ul>'+
+              '<li><a href="/"><img src="src/assets/img/logo.png" id="logo"</a></li>' +
+              '<li><a href="/">MENU PRINCIPAL</a></li>' +
+              '<li><a href="/">RECEITAS SALGADAS</a></li>'+
+              '<li><a href="/">RECEITAS DOCES</a></li>'+
+          '</ul>'+
+          '<a href="src/templates/cadastro.html"><button type="button" class="btn-vermelho"> SE INSCREVA </button></a>'+
+      '</div>'+
+  '</div>' +
+
   "<div class='vertical-bar'>" +
       "<div class='search-icon'>" +
           "<a href='/'><i class='fa fa-th-list'></i></a>" +
@@ -21,16 +33,5 @@ $("body").prepend(
           "</ul>" +
       "</div>" +
   "</div>"+
-  "<div class='nav-bar'>" +
-
-  '<div class="nav-bar">' +
-      '<div class="nav-link">'+
-          '<ul>'+
-              '<li><a href="/"><img src="src/assets/img/logo.png" id="logo"</a></li>' +
-              '<li><a href="/">MENU PRINCIPAL</a></li>' +
-              '<li><a href="/">RECEITAS SALGADAS</a></li>'+
-              '<li><a href="/">RECEITAS DOCES</a></li>'+
-          '</ul>'+
-          '<a href="src/templates/cadastro.html"><button type="button" class="btn-vermelho"> SE INSCREVA </button></a>'+
-      '</div>'+
-  '</div>')
+  "<div class='nav-bar'>"
+)
