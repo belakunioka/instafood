@@ -17,7 +17,6 @@
 }
 
 #imagemReceita {
-	width: 26vw;
 	height: auto;
 	
 	filter: drop-shadow(7px 9px 4px rgba(0, 0, 0, 0.3));
