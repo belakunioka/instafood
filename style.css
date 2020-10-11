@@ -1,41 +1,41 @@
 * {
-  margin: 0;
-  padding: 0;
-  outline: 0;
-  font-family: "Hind", sans-serif;
-  box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: "Hind", sans-serif;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 html,
 body {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 body {
-  background: #fff;
-  color: #222;
-  -webkit-font-smoothing: antialiased !important;
+    background: #fff;
+    color: #222;
+    -webkit-font-smoothing: antialiased !important;
 }
 
 body,
 input,
 button {
-  color: #222;
-  font-size: 14px;
-  font-family: "Hind", Arial, Helvetica, sans-serif;
+    color: #222;
+    font-size: 14px;
+    font-family: "Hind", Arial, Helvetica, sans-serif;
 }
 
 button {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
- 
+
 img {
-  width: 100%;
+    width: 100%;
 }
 
 input,
@@ -43,10 +43,10 @@ textarea,
 button,
 select,
 a {
-  outline: none;
-  box-shadow: none;
-  text-decoration: none !important;
-  color: #222;
+    outline: none;
+    box-shadow: none;
+    text-decoration: none !important;
+    color: #222;
 }
 
 .vertical-bar {
@@ -56,6 +56,8 @@ a {
 }
 
 main {
-  padding-top: 60px; /*mudar*/
-  margin-left: 80px; /*mudar*/
+    padding-top: 60px;
+    /*mudar*/
+    margin-left: 80px;
+    /*mudar*/
 }
