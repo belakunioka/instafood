@@ -47,7 +47,6 @@
 }
 
 .text-informacoes {
-	font-family: Roboto;
 	font-weight: 600;
 	font-size: 0.9rem;
 	color: #FFFFFF;
@@ -57,8 +56,8 @@
 	color: #101010;
 }
 
-#ingredientes {
-	height: 389px;
+.como-fazer {
+	height: auto;
 
 	background:rgba(255,255,255, 0.4);
 	border-radius: 35px;
@@ -69,9 +68,16 @@
 	height: 47px;
 }
 
-.descricao-ingredientes {
-	font-family: Roboto;
+.descricao-como-fazer {
 	font-weight: 600;
 	font-size: 2rem;
+	color: #101010;
+}
+
+.list-como-fazer {
+	list-style-type: disc;
+	font-family: Roboto;
+	font-weight: 600;
+	font-size: 1rem;
 	color: #101010;
 }
