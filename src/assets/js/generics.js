@@ -23,7 +23,7 @@ $("body").prepend("<div class='vertical-bar'>" +
     "<div class='search-icon'>" +
     "<ul>" +
     "<li><a href='/' target='_blank'>RECEITAS <br>SALVAS</a></li>" +
-    "<li><a href='/' target='_blank'>POSTAR</a></li>" +
+    "<li><a href='../../criarReceita/index.html'>POSTAR</a></li>" +
     "<li><a href='/' target='_blank'>ENTRAR</a>" +
     "</li>" +
     "</ul>" +
