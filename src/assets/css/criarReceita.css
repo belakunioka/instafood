@@ -78,6 +78,7 @@ p {
 }
 
 .input-form input {
+    width: 20vw;
     height: 5vh;
     background-color: transparent;
     border-radius: 0;
@@ -99,12 +100,12 @@ p {
     width: 4vw;
 }
 
-/* Green button - add */
-.add {
+/* Green button - add && Red button - remove */
+.remove, .add {
     position: absolute;
-    right: 14vw;
+    bottom: 1vh;
+    right: 0.5vw;
 
-    margin: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -116,26 +117,71 @@ p {
     height: 5vh;
     width: 2.5vw;
 
-    background-color: #158046;
     color: #FFFFFF;
-    cursor: pointer;
     transition: .5s;
+}
+
+.add {
+    position: relative;
+    background-color: #158046;
+}
+
+#insert-ingredient {
+    left: 17vw;
+    top: -6vh;
 }
 
 .add:hover{
 	opacity: 0.7;
 }
 
+#insert-step {
+    margin-top: 1em;
+    margin-left: auto;
+}
+
+.remove {
+    background-color: rgb(194, 26, 11);
+}
+
+/* ADD List */
+.ingredient-list {
+    width: 60vw;
+    padding-inline-start: 0;
+    margin-top: 0.5em;
+    display: flex;
+    border-bottom: 0.02em solid #FFFFFF;
+}
+.ingredient-list li{
+    position: relative;
+    width: 20vw;
+    color: #FFFFFF;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
 /* Textarea last tab class */
 .step-info, textarea:focus, textarea:hover {
+    margin: 0.8em 0;
     resize: none;
-    width: 70vw;
-    max-width: 70vw;
+    height: 20vh !important;
+    width: 62vw;
+    max-width: 62vw;
     padding: 0.8em;
 
     text-align: left;
     border: 0.1em solid #FFFFFF;
     background-color: transparent;
+}
+
+.step-item {
+    position: relative;
+    margin-top: 1em;
+}
+
+.remove-step{
+    top: 12vh;
+    right: -3.5vw;
 }
 
 /* Previous/next button */

@@ -68,7 +68,7 @@
                     </fieldset>
                 </div>
 
-                <p>Adicione tags à receita</p>
+                <p>Adicione tags à receita (opcional)</p>
                 <fieldset class="receipe-type-tags checkbox-content">
                     <fieldset class="checkbox-box">
                         <input type="checkbox" name="guilt-free" id="guilt-free">
@@ -103,26 +103,28 @@
                 <div class="input-box">
                     <fieldset class="input-form">
                         <label for="ingredient-name">Nome</label>
-                        <input type="text" name="ingredient-name" id="ingredient-name" required>
+                        <input type="text" name="ingredient-name" id="ingredient-name">
                     </fieldset>
 
                     <fieldset class="input-form">
                         <label for="ingredient-quantity">Quantidade</label>
-                        <input type="text" name="ingredient-quantity" id="ingredient-quantity" required>
+                        <input type="text" name="ingredient-quantity" id="ingredient-quantity">
                     </fieldset>
 
                     <fieldset class="input-form">
                         <label for="quantity-unit">Unidade</label>
-                        <input type="text" name="quantity-unit" id="quantity-unit" required>
+                        <input type="text" name="quantity-unit" id="quantity-unit">
+                        <button type="button" class="add" id="insert-ingredient">
+                            <i class="fas fa-plus"></i>
+                        </button>
                     </fieldset>
                 </div>
-                <button type="button" class="add" id="insert-ingredient">
-                    <i class="fas fa-plus"></i>
-                </button>
+
+                <ul id="selected-ingredients"></ul>
             </div>
 
             <div class="tab" id="receipe-utensil">
-                <h2>Quais utensilios são indispensáveis?</h2>
+                <h2>Quais utensilios são indispensáveis? (opcional)</h2>
 
                 <fieldset class="utensils-tags checkbox-content">
                     <fieldset class="checkbox-box">
@@ -154,11 +156,14 @@
 
             <div class="tab" id="receipe-steps">
                 <h2>Descreva o preparo da receita</h2>
-
-                <fieldset class="input-form">
-                    <label for="step">Passo 1</label>
-                    <textarea class="step-info" name="step" cols="30" rows="5"></textarea>
-                </fieldset>
+                <ol id="receipe-steps-list">
+                    <li>
+                        <fieldset class="input-form">
+                            <label for="step">Passo</label>
+                            <textarea class="step-info" name="step"></textarea>
+                        </fieldset>
+                    </li>
+                </ol>
                 <button type="button" class="add" id="insert-step">
                     <i class="fas fa-plus"></i>
                 </button>
@@ -169,8 +174,7 @@
                     Passo anterior
                 </button>
 
-                <button type="button" class="btn-form" id="next-btn"
-                 onclick="nextPrev(1)">Próximo passo
+                <button type="button" class="btn-form" id="next-btn" onclick="nextPrev(1)">Próximo passo
                 </button>
             </fieldset>
 
