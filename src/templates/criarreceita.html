@@ -6,76 +6,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instafood</title>
     <!--Global Stylesheet-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="..\..\style.css">
-    <link rel="stylesheet" href="..\assets\css\bootstrap.min.css">
+    <link rel="stylesheet" href="..\src\assets\css\bootstrap.min.css">
     <!--Custom Stylesheets-->
     <link rel="stylesheet" href="..\assets\css\style.css">
-    <link rel="stylesheet" href="..\assets\css\login.css">
+    <link rel="stylesheet" href="..\assets\css\criarreceita.css">
     <!--Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
     <!--Material icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--Hind Font-->
     <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet" />
-
 </head>
 
-
-<body>
-    <nav></nav>
+<body id="create-receipe">
+    <nav id="create-receipe-nav"><img src="../assets/img/logo.png" id="logo"></nav>
     <div id="sidenav"></div>
     <!--Page content-->
     <main>
-        <h1><span class="styling"> Insta</span>food</h1>
-        <h2>Cadastro de Receita</h2>
-        <form action="" method="POST" name="formulario">
-            <div class="form-group">
-                <input class="input input_nomereceita" type="text" placeholder="Título da receita" required/>
+        <form action="../../index.html" id="create-receipe-form">
+            <h1>Cadastro de Receita</h1>
+
+            <!-- Arrows which indicates the steps of the form: -->
+            <div class="form-step-box">
+                <i class="fas fa-caret-right form-step"></i>
+                <i class="fas fa-caret-right form-step"></i>
+                <i class="fas fa-caret-right form-step"></i>
+                <i class="fas fa-caret-right form-step"></i>
             </div>
-            <div class="form-group row">
 
-                <input class="input input_tempopreparo" type="text" placeholder="Tempo de preparo" required/>
-                <select class="tempo" name="tempo">
-                    <option value="minutos">minutos</option>
-                    <option value="horas">horas</option>
-                </select>
+            <p id="alert"></p>
 
-                <input class="input input_qtdporcao" type="text" placeholder="Quantidade de porções" required/>
-                <h4 id="porcoes">porções</h4>
+            <!-- One "tab" for each step in the form: -->
+            <div class="tab first-tab" id="receipe-info">
+                <h2>Informe o nome da sua receita</h2>
+                <div class="input-box">
+                    <fieldset class="input-form">
+                        <label for="receipe-name">Nome</label>
+                        <input type="text" name="receipe-name" id="receipe-name" required>
+                    </fieldset>
+
+                    <fieldset class="input-form">
+                        <label for="receipe-type">Tipo</label>
+                        <input type="text" name="receipe-type" id="receipe-type" required>
+                    </fieldset>
+                </div>
+
+                <div class="input-box">
+                    <fieldset class="input-form">
+                        <label for="receipe-time">Tempo de preparo</label>
+                        <input type="text" name="receipe-time" id="receipe-time" required>
+                    </fieldset>
+
+                    <fieldset class="input-form">
+                        <label for="receipe-yield">Rendimento</label>
+                        <input type="text" name="receipe-yield" id="receipe-yield" required>
+                    </fieldset>
+                </div>
+
+                <p>Adicione tags à receita (opcional)</p>
+                <fieldset class="receipe-type-tags checkbox-content">
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="guilt-free" id="guilt-free">
+                        <label for="guilt-free">Sem culpa</label>
+                    </fieldset>
+
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="gluten-free" id="gluten-free">
+                        <label for="gluten-free">Glúten free</label>
+                    </fieldset>
+
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="lactose-free" id="lactose-free">
+                        <label for="lactose-free">Lactose free</label>
+                    </fieldset>
+
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="vegan" id="vegan">
+                        <label for="vegan">Vegano</label>
+                    </fieldset>
+
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="vegetarian" id="vegetarian">
+                        <label for="vegetarian">Vegetariano</label>
+                    </fieldset>
+                </fieldset>
             </div>
-            <div class="form-group"></div>
-            <input name="categoria" id="semculpa" type="radio">Sem culpa</input>
-            <input name="categoria" id="restricao" type="radio">Com restrições</input>
 
-            <input type="checkbox" classe="restrito" value="semlactose">Sem lactose</input>
-            <input type="checkbox" classe="restrito" value="semgluten">Sem gluten</input>
-            <input type="checkbox" classe="restrito" value="veganas">Veganas</input>
+            <div class="tab" id="receipe-ingredients">
+                <h2>Adicione os ingredientes à sua receita</h2>
 
+                <div class="input-box">
+                    <fieldset class="input-form">
+                        <label for="ingredient-name">Nome</label>
+                        <input type="text" name="ingredient-name" id="ingredient-name">
+                    </fieldset>
+
+                    <fieldset class="input-form">
+                        <label for="ingredient-quantity">Quantidade</label>
+                        <input type="text" name="ingredient-quantity" id="ingredient-quantity">
+                    </fieldset>
+
+                    <fieldset class="input-form">
+                        <label for="quantity-unit">Unidade</label>
+                        <input type="text" name="quantity-unit" id="quantity-unit">
+                        <button type="button" class="add" id="insert-ingredient">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </fieldset>
+                </div>
+
+                <ul id="selected-ingredients"></ul>
             </div>
-            <div class="form-group">
-                <a href="/">
-                    <button type="button submit" class="btnnext">
-                    <bold>Anterior</bold>
-                    </button>
-                </a>
 
-                <a href="/">
-                    <button type="button submit" class="btnnext">
-                    <bold>Próximo</bold>
-                    </button>
-                </a>
+            <div class="tab" id="receipe-utensil">
+                <h2>Quais utensilios são indispensáveis? (opcional)</h2>
 
+                <fieldset class="utensils-tags checkbox-content">
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="mixer" id="mixer">
+                        <label for="mixer">Batedeira</label>
+                    </fieldset>
+
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="microwave" id="microwave">
+                        <label for="microwave">Microondas</label>
+                    </fieldset>
+
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="blender" id="blender">
+                        <label for="blender">Liquidificador</label>
+                    </fieldset>
+
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="stove" id="stove">
+                        <label for="stove">Fogão</label>
+                    </fieldset>
+
+                    <fieldset class="checkbox-box">
+                        <input type="checkbox" name="oven" id="oven">
+                        <label for="oven">Forno</label>
+                    </fieldset>
+                </fieldset>
             </div>
+
+            <div class="tab" id="receipe-steps">
+                <h2>Descreva o preparo da receita</h2>
+                <ol id="receipe-steps-list">
+                    <li>
+                        <fieldset class="input-form">
+                            <label for="step">Passo</label>
+                            <textarea class="step-info" name="step"></textarea>
+                        </fieldset>
+                    </li>
+                </ol>
+                <button type="button" class="add" id="insert-step">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <fieldset class="btn-form-box">
+                <button type="button" class="btn-form" id="prev-btn" onclick="nextPrev(-1)">
+                    Passo anterior
+                </button>
+
+                <button type="button" class="btn-form" id="next-btn" onclick="nextPrev(1)">Próximo passo
+                </button>
+            </fieldset>
 
         </form>
+
     </main>
     <!--Page content end-->
     <!--Javascript Sources-->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="..\components\menuSuperior.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="..\components\menuLateral.js"></script>
-    <script src="..\assets\js\login.js"></script>
+    <script src="..\assets\js\criarReceita.js"></script>
+
 </body>
 
 </html>
