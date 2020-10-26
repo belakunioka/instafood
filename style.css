@@ -61,3 +61,8 @@ main {
     margin-left: 80px;
     /*mudar*/
 }
+
+#custom-h4 {
+    font-weight: bolder;
+    text-shadow: 0.1em 0.1em #000;
+}
