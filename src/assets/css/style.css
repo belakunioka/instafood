@@ -1,6 +1,6 @@
 .styling {
     font-weight: 50;
-    color: #c21a0b;
+    color: rgb(194, 26, 11);
     text-transform: uppercase;
     font-family: "Hind", sans-serif;
 }
@@ -50,17 +50,16 @@ a:active {
 }
 
 #logo {
-    width: 50%;
+    width: 200px;
     /*mudar*/
-    margin: 5% 0% 10% 10%;
+    margin: 10px 0px 10px 10px;
 }
 
 .nav-bar {
-    z-index: 10;
     position: fixed;
     width: calc(100vw - 80px);
     /*mudar*/
-    margin-left: 3%;
+    margin-left: 80px;
     /*mudar*/
 }
 
@@ -82,7 +81,7 @@ a:active {
 }
 
 .btn-vermelho {
-    padding: 1% 2%;
+    padding: 10px 20px;
     /*mudar*/
     border: 0;
     background: rgb(194, 26, 11);
@@ -97,14 +96,14 @@ a:active {
 }
 
 .banner-title {
-    margin-left: 6%;
+    margin-left: 80px;
     /*mudar*/
     color: #fff;
 }
 
 .banner-title h1 {
     font-size: 64px;
-    margin-bottom: 5%;
+    margin-bottom: 30px;
     /*mudar*/
 }
 
@@ -177,7 +176,7 @@ a:active {
 }
 
 .social-icons .fa {
-   
+    margin: 15px 23px;
     /*mudar*/
     display: block;
     padding: 8px;
@@ -198,7 +197,7 @@ a:active {
 
 
 /*PAGINA DE RECEITAS*/
-/*essa classe n está sendo utilizada em nenhum lugar*/
+
 .nomedareceita {
     font-size: 25px;
     text-align: center;
@@ -209,7 +208,7 @@ a:active {
     color: rgb(194, 26, 11);
     text-shadow: 2px 2px #000;
 }
-/*não está sendo utilizado em nenhum lugar (só encontrei descricao-ingredientes)*/
+
 .descricao {
     color: rgb(194, 26, 11);
     margin-left: 30px;
@@ -219,7 +218,7 @@ a:active {
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
-/*não está sendo utilizado em nenhum lugar*/
+
 .dificuldade {
     color: rgb(194, 26, 11);
     margin-left: 30px;
@@ -229,7 +228,7 @@ a:active {
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
-/*não está sendo utilizado em nenhum lugar*/
+
 .tempo {
     color: rgb(194, 26, 11);
     margin-left: 30px;
@@ -239,7 +238,7 @@ a:active {
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
-/*não está sendo utilizado em nenhum lugar*/
+
 .rendimento {
     color: rgb(194, 26, 11);
     margin-left: 30px;
@@ -249,7 +248,7 @@ a:active {
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
-/*não está sendo utilizado em nenhum lugar*/
+
 .equipamentos {
     color: rgb(194, 26, 11);
     margin-left: 30px;
@@ -259,7 +258,7 @@ a:active {
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
-/*não está sendo utilizado em nenhum lugar*/
+
 .ingredientes {
     color: rgb(194, 26, 11);
     margin-left: 30px;
@@ -269,7 +268,7 @@ a:active {
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
-/*não está sendo utilizado em nenhum lugar*/
+
 .passos {
     color: rgb(194, 26, 11);
     margin-left: 30px;
@@ -279,12 +278,12 @@ a:active {
     font-size: 20px;
     text-shadow: 1px 1px #000;
 }
-/*não está sendo utilizado em nenhum lugar*/
+
 .conteudo {
     font-size: 16px;
     text-align: left;
 }
-/*não está sendo utilizado em nenhum lugar*/
+
 .opnioes {
     text-align: center;
     background: cornsilk;
