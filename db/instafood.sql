@@ -11,6 +11,12 @@ CREATE TABLE usuario (
     CONSTRAINT pk_usuario PRIMARY KEY (id)
 );
 
+CREATE TABLE ingrediente (
+	id INT NOT NULL AUTO_INCREMENT,
+    titulo VARCHAR(255) NOT NULL UNIQUE,
+    CONSTRAINT pk_ingrediente PRIMARY KEY (id)
+);
+
 CREATE TABLE receita (
 	id INT NOT NULL AUTO_INCREMENT,
     titulo VARCHAR(60) NOT NULL,
@@ -28,11 +34,14 @@ CREATE TABLE receita (
 CREATE TABLE receita_ingrediente (
 	id INT NOT NULL AUTO_INCREMENT,
     receita_id INT NOT NULL,
-    nome VARCHAR(120) NOT NULL,
+	ingrediente_id INT NOT NULL,
+    quantidade INT NOT NULL,
+    unidade VARCHAR(60) NOT NULL,
     CONSTRAINT pk_receita_ingrediente PRIMARY KEY (id),
-    CONSTRAINT fk_receita_receita_ingrediente_id FOREIGN KEY (receita_id) REFERENCES receita(id)
+    CONSTRAINT fk_receita_ingrediente_receita_id FOREIGN KEY (receita_id) REFERENCES receita(id),
+    CONSTRAINT fk_receita_ingrediente_ingrediente_id FOREIGN KEY (ingrediente_id) REFERENCES ingrediente(id) 
 );
-CREATE INDEX ix_ingrediente ON receita_ingrediente (nome);
+
 
 CREATE TABLE utensilio (
 	id INT NOT NULL AUTO_INCREMENT,
