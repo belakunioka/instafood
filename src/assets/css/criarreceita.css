@@ -22,7 +22,7 @@
 }
 
 p {
-    margin-top: 2em;
+    margin-top: 1em;
     color: #FFFFFF;
 }
 
@@ -68,12 +68,18 @@ p {
     display: flex;
 }
 
+.input-image input {
+    margin-top: 1em;
+    font-size: 0.8em;
+    background-color: transparent !important;
+}
+
 .input-form {
     display: flex;
     flex-direction: column;
 }
 
-.input-form label {
+label {
     font-size: 0.8em;
 }
 
@@ -95,9 +101,30 @@ p {
     font-size: 0.8em;
 }
 
-.checkbox-box input {
-    height: 4vh;
-    width: 4vw;
+.checkbox-box input, input[type="radio"]{
+    height: 3vh;
+    width: 3vw;
+
+}
+
+.input-form-type {
+    margin-left: 1em;
+}
+
+.input-image {
+    margin: 5vh 0;
+    font-size: 0.8em;
+    border: 1px solid #FFFFFF;
+
+    width: 40vw;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.input-image label {
+    color: rgb(194, 26, 11) !important;
 }
 
 /* Green button - add && Red button - remove */
