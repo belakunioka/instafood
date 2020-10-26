@@ -44,7 +44,6 @@
 
             <!-- One "tab" for each step in the form: -->
             <div class="tab first-tab" id="receipe-info">
-                <h2>Informe o nome da sua receita</h2>
                 <div class="input-box">
                     <fieldset class="input-form">
                         <label for="receipe-name">Nome</label>
@@ -64,14 +63,14 @@
                 </div>
 
                 <div class="input-box">
-                    <fieldset class="input-form">
-                        <label for="receipe-time">Tempo de preparo</label>
-                        <input type="text" name="receipe-time" id="receipe-time" required>
+                    <fieldset class="input-form receipe-time">
+                        <label for="receipe-time">Tempo de preparo (minutos)</label>
+                        <input type="number" name="receipe-time" id="receipe-time" required>
                     </fieldset>
 
                     <fieldset class="input-form">
-                        <label for="receipe-yield">Rendimento</label>
-                        <input type="text" name="receipe-yield" id="receipe-yield" required>
+                        <label for="receipe-yield">Rendimento (porções)</label>
+                        <input type="number" name="receipe-yield" id="receipe-yield" required>
                     </fieldset>
                 </div>
 
@@ -115,12 +114,23 @@
 
                     <fieldset class="input-form">
                         <label for="ingredient-quantity">Quantidade</label>
-                        <input type="text" name="ingredient-quantity" id="ingredient-quantity">
+                        <input type="number" name="ingredient-quantity" id="ingredient-quantity">
                     </fieldset>
 
                     <fieldset class="input-form">
                         <label for="quantity-unit">Unidade</label>
-                        <input type="text" name="quantity-unit" id="quantity-unit">
+                        <select name="quantity-unit" id="quantity-unit">
+                            <option value="">selecione o tipo</option>
+                            <option value="xícara">xícara</option>
+                            <option value="colher de chá">colher de chá</option>
+                            <option value="colher de sopa">colher de sopa</option>
+                            <option value="colher de sobremesa">colher de sobremesa</option>
+                            <option value="maço">maço</option>
+                            <option value="unidade">unidade</option>
+                            <option value="grama">grama</option>
+                            <option value="ml">ml</option>
+                            <option value="litro">litro</option>
+                        </select>
                         <button type="button" class="add" id="insert-ingredient">
                             <i class="fas fa-plus"></i>
                         </button>
