@@ -18,7 +18,7 @@ $("body").prepend(
           "<div class='search-icon'>" +
               "<ul>" +
                   "<li><a href='' target='_self'>RECEITAS <br>SALVAS</a></li>" +
-                  "<li><a href='' target='_self'>POSTAR</a></li>" +
+                  "<li><a href='src/templates/criarreceita.html' target='_self'>POSTAR</a></li>" +
                   "<li><a href='src/templates/login.html' target='_self'>ENTRAR</a>" +
                   "</li>" +
               "</ul>" +
