@@ -37,6 +37,7 @@
                 <i class="fas fa-caret-right form-step"></i>
                 <i class="fas fa-caret-right form-step"></i>
                 <i class="fas fa-caret-right form-step"></i>
+                <i class="fas fa-caret-right form-step"></i>
             </div>
 
             <p id="alert"></p>
@@ -50,9 +51,15 @@
                         <input type="text" name="receipe-name" id="receipe-name" required>
                     </fieldset>
 
-                    <fieldset class="input-form">
-                        <label for="receipe-type">Tipo</label>
-                        <input type="text" name="receipe-type" id="receipe-type" required>
+                    <fieldset class="input-form input-form-type">
+                        <label>Tipo</label>
+                        <fieldset>
+                            <input type="radio" name="receipe-type" id="receipe-type-salt">
+                            <label for="receipe-type-salt">Salgado</label>
+    
+                            <input type="radio" name="receipe-type" id="receipe-type-sweet">
+                            <label for="receipe-type-sweet">Doce</label>
+                        </fieldset>
                     </fieldset>
                 </div>
 
@@ -152,6 +159,14 @@
                         <label for="oven">Forno</label>
                     </fieldset>
                 </fieldset>
+            </div>
+
+            <div class="tab">
+                <h2>Adicione uma imagem à receita</h2>
+                <div class="input-image">
+                    <label for="receipe-image">Foto da receita</label>
+                    <input type="file" name="receipe-image" id="receipe-image" accept="image/*">
+                </div>
             </div>
 
             <div class="tab" id="receipe-steps">

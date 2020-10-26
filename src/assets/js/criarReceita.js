@@ -98,13 +98,13 @@ function removeIngredient(ingredient) {
 
 //ADD button - receipe steps
 let receipeStepsList = $("#receipe-steps-list")
-let c = 0;
+let stepDescriptionCounter = 0;
 $("#insert-step").click("click", () => {
     if ($(".step-info").eq(c).val() == ""){ //Check if last step was well filled 
         return;
     }
     setStep();
-    c++;
+    stepDescriptionCounter++;
 }, false);
 
 function setStep() {
@@ -124,5 +124,5 @@ function setStep() {
 //Remove button - steps
 function removeStep (step) {
      $(step).closest('.step-item').remove();
-     c--;
+     stepDescriptionCounter--;
 }
