@@ -5,10 +5,10 @@
 }
 
 #div-titulo-receita {
-	width: 35%;
+	width: 20vw;
 	
 	font-family: Roboto;
-	font-size: 36px;
+	font-size: 2rem;
 	text-align: center;
 	color: #FFFFFF;
 	
@@ -17,16 +17,13 @@
 }
 
 #imagemReceita {
-	width: 45%;
-	height: 85%;
+	height: auto;
 	
 	filter: drop-shadow(7px 9px 4px rgba(0, 0, 0, 0.3));
 	border-radius: 5px;
 }
 
 #informacoes-receita {
-	width: 44%;
-	height: 7em;
 	background: #CE2421;
 	border-radius: 35px;
 }
@@ -37,24 +34,66 @@
 
 .line {
 	border-left: 2px solid #101010;
-	height: 95px;
+	height: 6rem;
 }
 
 .icon-informacoes {
-	width: 45px;
+	width: 2.4vw;
 }
 
 .icon-informacoes-user {
-	width: 35px;
+	width: 1.9vw;
 }
 
 .text-informacoes {
-	font-family: Roboto;
 	font-weight: 600;
-	font-size: 15px;
+	font-size: 0.9rem;
 	color: #FFFFFF;
 }
 
 .text-informacoes-dados {
 	color: #101010;
+}
+
+.como-fazer {
+	height: auto;
+
+	background:rgba(255,255,255, 0.4);
+	border-radius: 35px;
+}
+
+.icon-descricao {
+	width: 47px;
+	height: 47px;
+}
+
+.descricao-como-fazer {
+	font-weight: 600;
+	font-size: 2rem;
+	color: #101010;
+}
+
+.list-como-fazer {
+	list-style-type: disc;
+	font-family: Roboto;
+	font-weight: 600;
+	font-size: 1rem;
+	color: #101010;
+}
+
+.paddingBottomTop{padding-top: 1.5%;
+padding-bottom: 1.5%;
+}
+
+.SeparacaoDetalheReceita{
+border-right: 2px solid black;
+
+}
+
+@media(max-width: 992px){
+
+.SeparacaoDetalheReceita{border: none;
+
+}
+
 }
