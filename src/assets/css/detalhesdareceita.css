@@ -80,3 +80,20 @@
 	font-size: 1rem;
 	color: #101010;
 }
+
+.paddingBottomTop{padding-top: 1.5%;
+padding-bottom: 1.5%;
+}
+
+.SeparacaoDetalheReceita{
+border-right: 2px solid black;
+
+}
+
+@media(max-width: 992px){
+
+.SeparacaoDetalheReceita{border: none;
+
+}
+
+}

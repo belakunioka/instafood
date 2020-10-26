@@ -27,78 +27,126 @@
 <body>
     <!--Page content-->
     <main class="hero">
-        <section class="mt-5 container d-flex flex-wrap justify-content-center" id="receita">
-            <div class="container d-flex flex-wrap justify-content-center">
-                <input class="mt-2" type="image" src="..\assets\img\icons\coração vazio.png" alt="Salvar Receita"
-                    id="favoritar" />
-                <div id="div-titulo-receita">
+        <section class="mt-5 container d-flex flex-wrap justify-content-center col-12 col-sm-9" id="receita">
+            <!-- Título da Receita -->
+
+
+
+                <div class="col-md-8 col-sm-12 row flex container"  id="div-titulo-receita">
+                    <div class="col-1 col-sm-2">
+                        <input class="mt-2" type="image" src="..\assets\img\icons\coração vazio.png" alt="Salvar Receita"
+                            id="favoritar" />
+                        </div>
+                        <div class="col-11 col-sm-10">
                     <strong id="tituloReceita"> Bolo de chocolate</strong>
+                    </div>
                 </div>
             </div>
 
-            <div class="mt-4 container d-flex flex-wrap justify-content-center">
+            <!-- Imagem da Receita -->
+            <div class="mt-4 container d-flex flex-wrap justify-content-center col-12 col-sm-12">
                 <img src="..\assets\img\imagemReceita\bolo de chocolate.jpg" alt="Imagem da Receita"
-                    id="imagemReceita" />
+                    class="col-12 col-sm-8" id="imagemReceita" />
             </div>
 
-            <div class="container d-flex flex-wrap" id="informacoes-receita">
+         
+     
 
-                <div class="custom-pl d-flex justify-content-between col-12">
+            <div class="mt-4 container row col-12 col-sm-8 justify-content-between" id="informacoes-receita">
+                
 
-                    <div class="custom-pl mt-4 d-flex col-4">
-                        <div class="custom-pl col-6">
-                            <img class="icon-informacoes" src="..\assets\img\icons\tempo de preparo.png" />
-                        </div>
-                        <div class="custom-pl">
-                            <span class="text-informacoes">Tempo de preparo:</span>
-                            <span class="text-informacoes text-informacoes-dados" id="tempoPreparo">40 min</span>
-                        </div>
+                
+                <div class="col-md-6 col-sm-12 container row SeparacaoDetalheReceita paddingBottomTop">      
+                    <div class="col-3 container ">
+                     <img class="icon-informacoes " src="..\assets\img\icons\tempo de preparo.png" />
                     </div>
 
-                    <div class="line mt-2"></div>
+                    <div class="col-9 text-informacoes" >
+                        Tempo de preparo:
+                        <span class="text-informacoes text-informacoes-dados" id="tempoPreparo">40 min</span>
+                    </div>
+                 </div>
 
-                    <div class="pl-1 mt-4 d-flex col-4">
-                        <div class="pl-1 col-6">
-                            <img class="icon-informacoes" src="..\assets\img\icons\porções.png" />
+                 <div class="col-md-6 col-sm-12 container row paddingBottomTop">
+                        <div class="col-3">
+                         <img class="icon-informacoes " src="..\assets\img\icons\do-utilizador.png" />
                         </div>
-                        <div class="custom-pl">
-                            <span class="text-informacoes">Rendimento:</span>
+
+                        <div class="col-9 text-informacoes">
+                            Receita por:
+                            <span class="custom-pl col-12 text-informacoes text-informacoes-dados"
+                                id="autorReceita">Maria Joana</span>
+                        </div>
+                 </div>
+
+                <div class="col-md-6 col-sm-12 container  row SeparacaoDetalheReceita paddingBottomTop">
+                    <div class="col-3">
+                     <img class="icon-informacoes " src="..\assets\img\icons\porções.png" />
+                    </div>
+
+                        <div class="col-9 text-informacoes">
+                            Rendimento:
                             <span class="text-informacoes text-informacoes-dados" id="rendimento">40 porções</span>
                         </div>
                     </div>
 
-                    <div class="line mt-2 ml-2"></div>
+                        <div class="col-md-6 col-sm-12 container row paddingBottomTop">
+                            <div class="col-3">
+                             <img class="icon-informacoes " src="..\assets\img\icons\calendario.png" />
+                             </div>
 
-                    <div class="pl-1 mt-3 d-flex flex-wrap col-5">
-                        <div class="custom-pl d-flex col-12">
-                            <div class="custom-pl col-3">
-                                <img class="icon-informacoes-user" src="..\assets\img\icons\do-utilizador.png" />
-                            </div>
-                            <div class="custom-pl col-9">
-                                <span class="custom-pl col-12 text-informacoes">Receita por:</span>
-                                <span class="custom-pl col-12 text-informacoes text-informacoes-dados" id="autorReceita">Maria Joana</span>
+                            <div class="col-9 text-informacoes">
+                               Postada em:
+                               <span class="text-informacoes text-informacoes-dados" id="dataReceita">08/09/2020</span>
                             </div>
                         </div>
-                        <div class="custom-pl d-flex col-12">
-                            <div class="custom-pl col-3">
-                                <img class="icon-informacoes-user" src="..\assets\img\icons\calendario.png" />
-                            </div>
-                            <div class="custom-pl col-9">
-                                <span class="text-informacoes">Postada em:</span>
-                                <span class="text-informacoes text-informacoes-dados" id="dataReceita">08/09/2020</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="container d-flex flex-wrap" id="ingredientes">
-                    <div>
-                        
-                    </div>
-                    <div>
-
-                    </div>
+            </div>
+       <!-- Como fazer -->
+            <div class="mt-4 como-fazer container d-flex flex-wrap col-12 col-sm-8">
+                <div class="mt-1 descricao-como-fazer container d-flex justify-content-center">
+                    <img src="../assets/img/icons/ingredients.png" alt="Ingredientes" class="icon-descricao" />
+                    <span class="ml-1">
+                        Ingredientes
+                    </span>
                 </div>
+                <div class="mt-4 d-flex">
+                    <ul class="ml-3 list-como-fazer">
+                        <li>2 xícaras de farinha de trigo</li>
+                        <li>2 xícaras de açúcar</li>
+                        <li>6 colheres (sopa) de chocolate em pó</li>
+                        <li>1 colher (sopa) de fermento em pó</li>
+                        <li>6 ovos</li>
+                        <li>2 colheres (sopa) de manteiga</li>
+                        <li>2 xícaras de leite</li>
+                        <li>1 xícara de chocolate em pó</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-4 mt-4 como-fazer container d-flex flex-wrap justify-content-center col-12 col-sm-8">
+                <div class="mt-1 descricao-como-fazer container d-flex justify-content-center">
+                    <img src="../assets/img/icons/modo de preparo.png" alt="Modo de Preparo" class="icon-descricao" />
+                    <span class="ml-1">
+                        Modo de Preparo
+                    </span>
+                </div>
+                <div class="mt-4 d-flex">
+                    <ul class="ml-3 list-como-fazer">
+                        <li>Em uma batedeira, bata as claras em neve, acrescente as gemas, o açúcar e bata novamente.
+                        </li>
+                        <li>Adicione a farinha, o chocolate em pó, o fermento, o leite e bata por mais alguns minutos.
+                        </li>
+                        <li>Despeje a massa em uma forma untada e leve para assar em forno médio (180° C), preaquecido,
+                            por 40 minutos.</li>
+                        <li>Para a cobertura, em uma panela, leve a fogo médio o chocolate em pó, a manteiga e o leite,
+                            deixe até ferver.</li>
+                        <li>Despeje quente sobre o bolo já assado.</li>
+                        <li>Espere esfriar e pode saborear a vontade!</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
 
             </div>
         </section>
