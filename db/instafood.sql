@@ -15,7 +15,7 @@ CREATE TABLE usuario (
 
 CREATE TABLE ingrediente (
 	id INT NOT NULL AUTO_INCREMENT,
-    titulo VARCHAR(255) NOT NULL UNIQUE,
+    titulo VARCHAR(255) NOT NULL,
     CONSTRAINT pk_ingrediente PRIMARY KEY (id),
     CONSTRAINT uc_ingrediente_nome UNIQUE KEY (titulo)
 );
