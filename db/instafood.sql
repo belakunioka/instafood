@@ -8,13 +8,16 @@ CREATE TABLE usuario (
     nome VARCHAR(120) NOT NULL,
     email VARCHAR(255) NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    CONSTRAINT pk_usuario PRIMARY KEY (id)
+    ativo TINYINT(1) NOT NULL,
+    CONSTRAINT pk_usuario PRIMARY KEY (id),
+    CONSTRAINT uc_usuario_email UNIQUE KEY (email)
 );
 
 CREATE TABLE ingrediente (
 	id INT NOT NULL AUTO_INCREMENT,
     titulo VARCHAR(255) NOT NULL UNIQUE,
-    CONSTRAINT pk_ingrediente PRIMARY KEY (id)
+    CONSTRAINT pk_ingrediente PRIMARY KEY (id),
+    CONSTRAINT uc_ingrediente_nome UNIQUE KEY (titulo)
 );
 
 CREATE TABLE receita (
@@ -41,7 +44,6 @@ CREATE TABLE receita_ingrediente (
     CONSTRAINT fk_receita_ingrediente_receita_id FOREIGN KEY (receita_id) REFERENCES receita(id),
     CONSTRAINT fk_receita_ingrediente_ingrediente_id FOREIGN KEY (ingrediente_id) REFERENCES ingrediente(id) 
 );
-
 
 CREATE TABLE utensilio (
 	id INT NOT NULL AUTO_INCREMENT,

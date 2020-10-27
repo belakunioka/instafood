@@ -1,6 +1,6 @@
 USE instafood;
 
-INSERT INTO usuario (nome, email, senha) VALUES ("Maria Joana", "maria.joana@gmail.com", "test124");
+INSERT INTO usuario (nome, email, senha, ativo) VALUES ("Maria Joana", "maria.joana@gmail.com", "test124", 1);
 
 INSERT INTO utensilio (nome) VALUES ("Batedeira");
 INSERT INTO utensilio (nome) VALUES ("Forma de Bolo");
