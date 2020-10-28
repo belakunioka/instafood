@@ -35,7 +35,7 @@ function nextPrev(step) {
 function validateForm() {
     let valid = true;
     if (currentTab != 1) {
-        let input = tabs.eq(currentTab).find("input[type='text']");
+        let input = tabs.eq(currentTab).find("input");
         for (let i = 0; i < input.length; i++) {
             if (input.eq(i).val() == "") {
                 $("#alert").html("* Os campos devem ser preenchidos");
@@ -100,7 +100,8 @@ function removeIngredient(ingredient) {
 let receipeStepsList = $("#receipe-steps-list")
 let stepDescriptionCounter = 0;
 $("#insert-step").click("click", () => {
-    if ($(".step-info").eq(c).val() == ""){ //Check if last step was well filled 
+    //Check if last step was well filled
+    if ($(".step-info").eq(stepDescriptionCounter).val() == ""){ 
         return;
     }
     setStep();
