@@ -1,4 +1,8 @@
 /* Body, nav, form-base */
+h1 {
+    font-size: 1.5em;
+}
+
 #create-receipe{
     background: #101010;
 }
@@ -23,6 +27,7 @@
 
 p {
     margin-top: 1em;
+    font-size: 0.8em;
     color: #FFFFFF;
 }
 
@@ -52,6 +57,10 @@ p {
     display: none;
 }
 
+.tab p {
+    margin-top: 2em;
+}
+
 .first-tab{
     display: block;
 }
@@ -79,6 +88,10 @@ p {
     flex-direction: column;
 }
 
+.receipe-time {
+    margin-right: 1em;
+}
+
 label {
     font-size: 0.8em;
 }
@@ -92,19 +105,32 @@ label {
     text-align: left;
 }
 
+#receipe-utensil h2{
+    margin-bottom: 1em;
+}
+
 .checkbox-content {
     display: flex;
 }
 
 .checkbox-box {
     display: flex;
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .checkbox-box input, input[type="radio"]{
-    height: 3vh;
-    width: 3vw;
+    height: 3.5vh;
+    width: 3.5vw;
+}
 
+select {
+    height: 5vh;
+
+    border: none;
+    border-bottom: 0.01em solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 0.8em;
+    background-color: #101010;
 }
 
 .input-form-type {
@@ -219,7 +245,8 @@ label {
 }
 
 .btn-form {
-    padding: 0.2em;
+    padding: 0.5em;
+    font-size: 0.8em;
     color: #FFFFFF;
     background-color:rgb(194, 26, 11);
     border: none;
