@@ -26,6 +26,7 @@ class item {
         input.classList.add('item_input');
 
         var edit = document.createElement('button');
+        edit.setAttribute('type', 'button');
         edit.classList.add('edit');
         edit.innerHTML = "edit";
         edit.addEventListener('click', () => this.edit(input, name));
