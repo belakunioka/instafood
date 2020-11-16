@@ -30,6 +30,59 @@ h2 {
     color: rgb(194, 26, 11);
     text-transform: uppercase;
 }
+
+/* Search form */
+#search-form {
+    position: absolute;
+    margin: 0 auto;
+    display: flex;
+}
+
+#search-form input[type="checkbox"]{
+    margin: 0;
+    height: 2.5vh;
+    width: 4vw;
+}
+
+#search-form label {
+    margin: 0;
+    font-size: 0.7em;
+}
+
+#filter-options {
+    margin-top: -16vh;
+    width: 20vw;
+}
+
+#filter-options-title {
+    text-align: center;
+    font-size: 1em;
+
+    color: #fff;
+}
+
+.tags-subtitle, .appliances-subtitle {
+    margin-left: 5vw;
+    font-size: 0.7em;
+    text-align: center;
+    color: #fff;
+}
+
+.tags-subtitle {
+    margin-left: 3vw;
+}
+
+.tag-filter, .appliances-menu {
+    margin-left: 8vw;
+    width: 20vw;
+}
+
+#ingredients-input {
+    margin-left: 10vw;
+}
+
+/*End search form*/
+
 .inputDiv{
 	display: flex;
 	justify-content: center;
