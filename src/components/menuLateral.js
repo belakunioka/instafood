@@ -1,12 +1,12 @@
 $("body").prepend(
     "<div class='vertical-bar'>" +
         "<div class='search-icon'>" +
-            "<a><i class='fa fa-th-list'></i></a>" +
-            "<a><i class='fa fa-search'></i></a>" +
+            "<a href='/'><i class='fa fa-th-list'></i></a>" +
+            "<i class='fa fa-search'></i>" +
             "<div class='search-icon'>" +
                 "<ul>" +
                     "<li><a href='/' target='_self'>RECEITAS <br>SALVAS</a></li>" +
-                    "<li><a href='../templates/criarreceita.html' target='_self'>POSTAR</a></li>" +
+                    "<li><a href='/' target='_self'>POSTAR</a></li>" +
                     "<li><a href='../templates/login.html' target='_self'>ENTRAR</a>" +
                     "</li>" +
                 "</ul>" +
@@ -22,4 +22,3 @@ $("body").prepend(
         "</div>" +
     "</div>"+
     "<div class='nav-bar'>")
-    
