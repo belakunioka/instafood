@@ -14,7 +14,7 @@ $("body").prepend(
   "<div class='vertical-bar'>" +
       "<div class='search-icon'>" +
           "<a href='/'><i class='fa fa-th-list'></i></a>" +
-          "<i class='fa fa-search'></i>" +
+          "<a><i class='fa fa-search'></i></a>" +
           "<div class='search-icon'>" +
               "<ul>" +
                   "<li><a href='' target='_self'>RECEITAS <br>SALVAS</a></li>" +
