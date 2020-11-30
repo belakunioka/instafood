@@ -104,6 +104,24 @@ label {
     border-bottom: 0.1em solid #FFFFFF;
     text-align: left;
 }
+input-form:hover,
+textarea:hover,
+input:focus,
+textarea:focus {
+    border-color: #000;
+    background-color: rgb(194, 26, 11);
+    color: black;
+    font-weight: bold;
+}
+
+.submit input {
+    padding: 10px 20px;
+    /*mudar*/
+    border: 0;
+    background: rgb(194, 26, 11);
+    font-weight: bold;
+    cursor: poinxter;
+}
 
 #receipe-utensil h2{
     margin-bottom: 1em;

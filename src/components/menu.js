@@ -56,11 +56,14 @@ const Menu = (() => {
 
     // Se o usuário estiver logado, adiciona o evento no botão logout
     const logoutButton = document.getElementById('button__logout');
+
     if (logoutButton) {
         logoutButton.addEventListener('click', () => {
+            alert("Vemos você em breve")
             localStorage.setItem('nome', '');
             localStorage.setItem('token', '');
             window.location.href = 'http://127.0.0.1:5500/index.html';
         });
     }
-  })();
+
+})();
