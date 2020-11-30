@@ -251,3 +251,7 @@ select {
     background-color:rgb(194, 26, 11);
     border: none;
 }
+
+#submit-btn {
+    display: none;
+}

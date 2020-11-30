@@ -12,7 +12,7 @@ function showTab(step) {
 
     //Previous/Next buttons
     step == 0 ? $("#prev-btn").hide() : $("#prev-btn").show();
-    step == tabs.length - 1 ? $("#next-btn").html("Postar receita")
+    step == tabs.length-1? $("#submit-btn").show() 
         : $("#next-btn").html("Próximo passo");
 
     fixStepIndicator(step)
@@ -25,8 +25,9 @@ function nextPrev(step) {
     tabs.eq(currentTab).hide();
     currentTab = currentTab + step;
 
-    if (currentTab >= tabs.length) { //end of form
-        form.submit();
+    if (currentTab == tabs.length-1) { //end of form
+        $("#next-btn").hide();
+        $("#submit-btn").show()
         return false;
     }
     showTab(currentTab);
@@ -75,9 +76,9 @@ $("#insert-ingredient").click("click", () => {
 function setIngredients(arr) {
     let listOfIngredients = $(`
     <ul class="ingredient-list">
-        <li>${arr[0].val()}</li>
-        <li>${arr[1].val()}</li>
-        <li>${arr[2].val()}
+        <li class="ingredient-name">${arr[0].val()}</li>
+        <li class="ingredient-quantity">${arr[1].val()}</li>
+        <li class="ingredient-unity">${arr[2].val()}
             <button class="remove" onclick="removeIngredient(this)" type="button">
                 <i class="fas fa-minus"></i>
             </button>
@@ -101,7 +102,7 @@ let receipeStepsList = $("#receipe-steps-list")
 let stepDescriptionCounter = 0;
 $("#insert-step").click("click", () => {
     //Check if last step was well filled
-    if ($(".step-info").eq(stepDescriptionCounter).val() == ""){ 
+    if ($(".step-info").eq(stepDescriptionCounter).val() == "") {
         return;
     }
     setStep();
@@ -123,7 +124,11 @@ function setStep() {
 }
 
 //Remove button - steps
-function removeStep (step) {
-     $(step).closest('.step-item').remove();
-     stepDescriptionCounter--;
+function removeStep(step) {
+    $(step).closest('.step-item').remove();
+    stepDescriptionCounter--;
 }
+
+$("#submit-btn").click("click", () => {
+    form.submit();
+});
