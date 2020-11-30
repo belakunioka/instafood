@@ -28,20 +28,37 @@
     <!--Page content-->
     <main>
         <h1><span class="styling"> Insta</span>food</h1>
-        <h2>Esqueci minha senha</h2>
-        <h4>Insira o seu email e enviaremos um link para você voltar a acessar sua conta.</h4>
+        <h2>Crie a sua conta!</h2>
         <div>
             <div class="form-group">
-                <input id="form__esquecer-email" class="input input_email" type="email" placeholder="E-mail" required />
+                <input id="form__registrar-nome" class="input input_nome" type="text" placeholder="Nome de usuário"
+                    required />
             </div>
-
             <div class="form-group">
-                <button id="form__esquecer-enviar--button" type="button submit" class="btnvermelho">
-                    <bold>Enviar</bold>
+                <input id="form__registrar-email" class="input input_email" type="email" placeholder="E-mail"
+                    required />
+            </div>
+            <div class="form-group">
+
+                <input id="form__registrar-senha" class="input input_senha" type="password" placeholder="Senha"
+                    required />
+
+            </div>
+            <div class="form-group">
+
+                <input id="form__registrar-confirmarSenha" class="input input_repsenha" type="password"
+                    placeholder="Repita a sua senha" required />
+
+            </div>
+            <div class="form-group">
+
+                <button id="form__registrar-entrar--button" type="button submit" class="btnvermelho">
+                    <bold>CADASTRAR</bold>
                 </button>
+
             </div>
         </div>
-
+        <h4>Já possui uma conta?<a href="login.html"> Faça login!</a></h4>
     </main>
     <!--Page content end-->
     <!--Javascript Sources-->
@@ -49,19 +66,18 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-        document.getElementById('form__esquecer-enviar--button').addEventListener('click', e => {
-            const email = document.getElementById('form__esquecer-email').value;
-            axios.get('http://localhost:8080/api/auth/esquecer', {
-                params: {
-                    email
-                }
+        const params = new URLSearchParams(window.location.search);
+        axios.get('http://localhost:8080/api/auth/confirmar', {
+            params: {
+                token: params.get('token')
+            }
+        })
+            .then(res => {
+                const primeiroNome = res.data.nome.split(' ')[0];
+                alert('Olá, ' + primeiroNome + '! Sua conta foi confirmada com sucesso');
+                window.location.href = 'http://127.0.0.1:5500/src/template/login.html'
             })
-                .then(res => {
-                   alert('Um email foi enviado para sua conta');
-                   window.location.href = 'http://127.0.0.1:5500/index.html';
-                })
-                .catch(err => console.log(err));
-        });
+            .catch(err => console.log(err));
     </script>
 </body>
 
