@@ -94,6 +94,13 @@ a:active {
 .nav-link .btn-vermelho {
     float: right;
 }
+.nav-link-usuario{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    float: right;
+    color: red;
+}
 
 .banner-title {
     margin-left: 80px;

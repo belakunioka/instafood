@@ -13,10 +13,14 @@ const Menu = (() => {
     // Verifica se o usuário está logado
     const nome = localStorage.getItem('nome');
     if (nome) {
-        menuSuperior += `<a href="../templates/perfil.html">${nome}</a></div></div>`;
+        menuSuperior += `
+        <a href="../templates/perfil.html"><button type="button" class="btn-vermelho">${nome}</a></button >
+    
+    `;
     } else {
         menuSuperior += `<a href="../templates/cadastro.html"><button type="button" class="btn-vermelho"> SE INSCREVA </button></a></div></div>`;
     }
+
 
     let menuLateral = `
         <div class="vertical-bar">
@@ -49,17 +53,23 @@ const Menu = (() => {
                 </ul>
             </div>
         </div>
+        
     `;
+
+
+
+    window.location.replace = "http://127.0.0.1:5500/src/templates/busca.html";
 
     document.body.insertAdjacentHTML('afterbegin', menuSuperior);
     document.body.insertAdjacentHTML('afterbegin', menuLateral);
+    window.location.replace = "http://127.0.0.1:5500/src/templates/busca.html";
 
     // Se o usuário estiver logado, adiciona o evento no botão logout
     const logoutButton = document.getElementById('button__logout');
 
     if (logoutButton) {
         logoutButton.addEventListener('click', () => {
-            alert("Vemos você em breve")
+            alert("Já vai? Vemos você em breve!")
             localStorage.setItem('nome', '');
             localStorage.setItem('token', '');
             window.location.href = 'http://127.0.0.1:5500/index.html';
