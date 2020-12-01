@@ -14,7 +14,7 @@ const Menu = (() => {
     const nome = localStorage.getItem('nome');
     if (nome) {
         menuSuperior += `
-            <button type="button" class="btn-vermelho"><a id='usuario-nome' href="../src/templates/perfil.html">${nome}</a></button>
+            <button type="button" class="btn-vermelho"><a id='usuario-nome' href="perfil.html">${nome}</a></button>
     `;
     } else {
         menuSuperior += `<a href="../templates/cadastro.html"><button type="button" class="btn-vermelho"> SE INSCREVA </button></a></div></div>`;
@@ -28,14 +28,20 @@ const Menu = (() => {
                 <i class="fa fa-search"></i>
                 <div class="search-icon">
                     <ul>
-                        <li><a href="/" target="_self">RECEITAS <br>SALVAS</a></li>
-                        <li><a href="./src/templates/criarreceita.html" target="_self">POSTAR</a></li>
     `;
 
     if (nome) {
-        menuLateral += `<li><div id="button__logout">SAIR</div></li>`;
+        menuLateral += `
+            <li><a href="/" target="_self">RECEITAS <br>SALVAS</a></li>
+            <li><a href="./src/templates/criarreceita.html" target="_self">POSTAR</a></li>
+            <li><div id="button__logout">SAIR</div></li>
+        `;
     } else {
-        menuLateral += '<li><a href="../src/templates/login.html" target="_self">ENTRAR</a></li>';
+        menuLateral += `
+            <li><a href="login.html" target="_self">RECEITAS <br>SALVAS</a></li>
+            <li><a href="login.html" target="_self">POSTAR</a></li>
+            <li><a href="login.html" target="_self">ENTRAR</a></li>
+        `;
     }
 
     menuLateral += `

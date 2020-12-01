@@ -8,11 +8,11 @@
     <!--Global Stylesheet-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="..\..\style.css">
-    <link rel="stylesheet" href="..\assets\css\bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src\assets\css\bootstrap.min.css">
     <!--Custom Stylesheets-->
-    <link rel="stylesheet" href="..\assets\css\style.css">
-    <link rel="stylesheet" href="..\assets\css\login.css">
+    <link rel="stylesheet" href="src\assets\css\style.css">
+    <link rel="stylesheet" href="src\assets\css\login.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -41,7 +41,7 @@
                 </button>
             </div>
         </div>
-
+        <h4>Novo no Instafood?<a href="cadastro.html"> Cadastre-se!</a></h4>
     </main>
     <!--Page content end-->
     <!--Javascript Sources-->
@@ -57,10 +57,10 @@
                 }
             })
                 .then(res => {
-                   alert('Um email foi enviado para sua conta');
-                   window.location.href = 'http://127.0.0.1:5500/index.html';
+                    alert('Um email foi enviado para sua conta');
+                    window.location.href = 'http://127.0.0.1:5500/index.html';
                 })
-                .catch(err => console.log(err));
+                .catch(err => alert(err.response.data.mensagem));
         });
     </script>
 </body>
