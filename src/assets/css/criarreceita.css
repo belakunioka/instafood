@@ -218,8 +218,8 @@ select {
     margin: 0.8em 0;
     resize: none;
     height: 20vh !important;
-    width: 62vw;
-    max-width: 62vw;
+    width: 58vw;
+    max-width: 58vw;
     padding: 0.8em;
 
     text-align: left;
@@ -250,8 +250,4 @@ select {
     color: #FFFFFF;
     background-color:rgb(194, 26, 11);
     border: none;
-}
-
-#submit-btn {
-    display: none;
 }

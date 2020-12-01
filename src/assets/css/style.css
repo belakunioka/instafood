@@ -80,6 +80,17 @@ a:active {
     list-style: none;
 }
 
+.menu-btn {
+    outline: none !important;
+    border: none;
+    background-color: transparent;
+    color: #FFFFFF;
+}
+
+.menu-btn:hover {
+    color: rgb(194, 26, 11);
+}
+
 .btn-vermelho {
     padding: 10px 20px;
     /*mudar*/

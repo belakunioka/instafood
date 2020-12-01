@@ -1,0 +1,18 @@
+.receipes-list {
+    margin: 15vh auto;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.receipe-view {
+    width: 15vw;
+    
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+.receipes-list a {
+    color: #000000 !important;
+}
