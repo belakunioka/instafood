@@ -8,11 +8,11 @@
     <!--Global Stylesheet-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="..\..\style.css">
-    <link rel="stylesheet" href="..\assets\css\bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src\assets\css\bootstrap.min.css">
     <!--Custom Stylesheets-->
-    <link rel="stylesheet" href="..\assets\css\style.css">
-    <link rel="stylesheet" href="..\assets\css\login.css">
+    <link rel="stylesheet" href="src\assets\css\style.css">
+    <link rel="stylesheet" href="src\assets\css\login.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
         integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
@@ -28,7 +28,7 @@
     <!--Page content-->
     <main>
         <h1><span class="styling"> Insta</span>food</h1>
-        <h2>Crie a sua conta!</h2>
+        <h2>Redefinição de senha</h2>
         <div>
             <div class="form-group">
                 <input id="form__redefinir-senha" class="input input_senha" type="password" placeholder="Senha"
@@ -55,8 +55,6 @@
         const senha = document.getElementById('form__redefinir-senha').value;
         const confirmacaoSenha = document.getElementById('form__redefinir-confirmarSenha').value;
 
-        console.log(params.get('token'));
-        console.log(senha + "" + confirmacaoSenha);
         axios.post('http://localhost:8080/api/auth/redefinir', {
             tokenRedefinirSenha: params.get('token'),
             senha,
@@ -65,7 +63,7 @@
             .then(res => {
                 alert('Senha modificada com sucesso. Faça login!');
                 setTimeout(() => {
-                    window.location.href = 'http://127.0.0.1:5500/index.html';
+                    window.location.href = 'http://127.0.0.1:5500/login.html';
                 }, 2000);
             })
             .catch(err => {
