@@ -3,9 +3,15 @@ USE instafood;
 INSERT INTO usuario (nome, email, senha, ativo) VALUES ("Maria Joana", "maria.joana@gmail.com", "test124", 1);
 
 INSERT INTO utensilio (nome) VALUES ("Batedeira");
-INSERT INTO utensilio (nome) VALUES ("Forma de Bolo");
+INSERT INTO utensilio (nome) VALUES ("Forno");
+INSERT INTO utensilio (nome) VALUES ("Liquidificador");
+INSERT INTO utensilio (nome) VALUES ("Fogão");
+INSERT INTO utensilio (nome) VALUES ("Microondas");
 
 INSERT INTO tag (nome) VALUES ("Sem culpa");
+INSERT INTO tag (nome) VALUES ("Glúten free");
+INSERT INTO tag (nome) VALUES ("Lactose free");
+INSERT INTO tag (nome) VALUES ("Vegano");
 INSERT INTO tag (nome) VALUES ("Vegetariano");
 
 INSERT INTO receita (titulo, imagem, data_criacao, tipo, tempo_preparo, rendimento, instrucoes, autor_id) 
