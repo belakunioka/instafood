@@ -12,7 +12,7 @@ function showTab(step) {
 
     //Previous/Next buttons
     step == 0 ? $("#prev-btn").hide() : $("#prev-btn").show();
-    step == tabs.length-1? $("#submit-btn").show() 
+    step == tabs.length-1? $("#next-btn").html("Postar receita")
         : $("#next-btn").html("Próximo passo");
 
     fixStepIndicator(step)
@@ -25,9 +25,8 @@ function nextPrev(step) {
     tabs.eq(currentTab).hide();
     currentTab = currentTab + step;
 
-    if (currentTab == tabs.length-1) { //end of form
-        $("#next-btn").hide();
-        $("#submit-btn").show()
+    if (currentTab == tabs.length) { //end of form
+        $("#next-btn").removeAttr("type").attr("type", "submit");
         return false;
     }
     showTab(currentTab);

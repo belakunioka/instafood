@@ -5,8 +5,8 @@ const Menu = (() => {
                 <ul>
                     <li><a href="/"><img src="./src/assets/img/logo.png" id="logo"</a></li>
                     <li><a href="/">MENU PRINCIPAL</a></li>
-                    <li><a href="/">RECEITAS SALGADAS</a></li>
-                    <li><a href="/">RECEITAS DOCES</a></li>
+                    <li><a href="./src/templates/receitassalgadas.html">RECEITAS SALGADAS</a></li>
+                    <li><a href="./src/templates/receitasdoces.html">RECEITAS DOCES</a></li>
                 </ul>
     `;
 
