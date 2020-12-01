@@ -1,3 +1,14 @@
+const nome = localStorage.getItem('nome');
+
+// Se o usuário não estiver logado, redireciona para página de login
+if (!nome) {
+    alert('Faça login para postar uma receita');
+    setTimeout(() => window.location.href = 'http://127.0.0.1:5500/src/templates/login.html', 200);
+}
+
+// Se estiver logado, pega o token
+const token = localStorage.getItem('token');
+
 //Multipages form
 let form = $("#create-receipe-form");
 let currentTab = 0;
@@ -12,7 +23,7 @@ function showTab(step) {
 
     //Previous/Next buttons
     step == 0 ? $("#prev-btn").hide() : $("#prev-btn").show();
-    step == tabs.length-1? $("#next-btn").html("Postar receita")
+    step == tabs.length - 1 ? $("#next-btn").html("Postar receita")
         : $("#next-btn").html("Próximo passo");
 
     fixStepIndicator(step)
@@ -26,7 +37,7 @@ function nextPrev(step) {
     currentTab = currentTab + step;
 
     if (currentTab == tabs.length) { //end of form
-        $("#next-btn").removeAttr("type").attr("type", "submit");
+        $("#next-btn").attr("class", "btn-submit-receipe btn-form");
         return false;
     }
     showTab(currentTab);
@@ -35,10 +46,11 @@ function nextPrev(step) {
 function validateForm() {
     let valid = true;
     if (currentTab != 1) {
-        let input = tabs.eq(currentTab).find("input");
+        let input = tabs.eq(currentTab).find("input[type=text]");
+        let radio = tabs.eq(currentTab).find('input[name=receipe-type]:checked')
         for (let i = 0; i < input.length; i++) {
-            if (input.eq(i).val() == "") {
-                $("#alert").html("* Os campos devem ser preenchidos");
+            if (input.eq(i).val() == "" || radio.val() == null) {
+                $("#alert").html("* Todos os campos devem ser preenchidos");
                 valid = false;
             }
         }
@@ -131,3 +143,103 @@ function removeStep(step) {
 $("#submit-btn").click("click", () => {
     form.submit();
 });
+
+
+//*******************************POST************************************* */
+const submitBtn = document.getElementById("next-btn");
+const receipeImage = document.getElementById("receipe-image");
+
+//Data
+function getCheckboxChecked(checkboxClass) {
+    let listOfElements = [];
+    let elements = document.querySelectorAll(checkboxClass);
+    for (let i = 0; i < elements.length; i++) {
+        if (elements[i].checked == true) {
+            listOfElements.push({ nome: elements[i].value });
+        }
+    }
+    return listOfElements;
+};
+
+function getIngredients() {
+    let listOfIngredients = [];
+    let ingredientsName = document.querySelectorAll(".ingredient-name");
+    let ingredientsQuantity = document.querySelectorAll(".ingredient-quantity");
+    let ingredientsUnity = document.querySelectorAll(".ingredient-unity");
+    let ingredientsTable = document.getElementById("selected-ingredients").childNodes;
+    for (let i = 0; i < ingredientsTable.length; i++) {
+        let ingredient = {
+            produto: {
+                nome: ingredientsName[i].innerText
+            },
+            quantidade: ingredientsQuantity[i].innerText,
+            unidade: ingredientsUnity[i].innerText
+        }
+        listOfIngredients.push(ingredient);
+    };
+    return listOfIngredients;
+};
+
+function getSteps() {
+    let steps = ""
+    let listOfSteps = document.querySelectorAll(".step-item");
+    for (let i = 0; i < listOfSteps.length; i++) {
+        let stepElement = document.querySelectorAll(".step-info");
+        steps += stepElement[i].value + "\n"
+    };
+    return steps;
+};
+
+//Collecting all data
+function getReceipeData() {
+    let nome = document.getElementById("receipe-name").value;
+    let tempo = document.getElementById("receipe-time").value;
+    let porcao = document.getElementById("receipe-yield").value;
+    let tipo = document.querySelector('input[name=receipe-type]:checked').value;
+    let tags = getCheckboxChecked(".checkbox-tag");
+    let utensilios = getCheckboxChecked(".checkbox-utensil");
+    let ingredientes = getIngredients();
+    let passos = getSteps();
+
+    let receita = {
+        titulo: nome,
+        tipo: tipo,
+        tempoPreparo: tempo + " min",
+        rendimento: porcao + " porções",
+        intrucoes: passos,
+        utensilios: utensilios,
+        ingredientes: ingredientes,
+        tags: tags
+    };
+    return receita;
+};
+
+//Requisição
+submitBtn.addEventListener("click", () => {
+    if (submitBtn.classList.contains("btn-submit-receipe")) {
+        axios({
+            method: 'POST',
+            url: "http://localhost:8080/api/receitas",
+            body: JSON.stringify(getReceipeData()),
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+            .then(res => console.log(res.json()))
+            .catch(error => console.log(error));
+
+        // receipeImage.addEventListener("change", (event) => {
+        //     let image = event.target.files[0]
+
+        //     const formData = new FormData()
+        //     formData.append("image", image);
+
+        //     axios.patch(`http://localhost:8080/api/receitas/receita/imagem/${id}`, formData)
+        //         .then(res => console.log(res))
+        //         .catch(error => console.log(error));
+        // })
+
+        document.getElementById("create-receipe-form").submit()
+        window.location.href = "http://127.0.0.1:5500/index.html";
+    }
+})
