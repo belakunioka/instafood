@@ -14,8 +14,7 @@ const Menu = (() => {
     const nome = localStorage.getItem('nome');
     if (nome) {
         menuSuperior += `
-        <a href="../templates/perfil.html"><button type="button" class="btn-vermelho">${nome}</a></button >
-    
+            <button type="button" class="btn-vermelho"><a id='usuario-nome' href="../src/templates/perfil.html">${nome}</a></button>
     `;
     } else {
         menuSuperior += `<a href="../templates/cadastro.html"><button type="button" class="btn-vermelho"> SE INSCREVA </button></a></div></div>`;

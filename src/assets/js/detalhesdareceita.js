@@ -20,8 +20,8 @@ const ingredientes = document.getElementById("ingredientes");
 const modoPreparo = document.getElementById("modoPreparo");
 
 window.addEventListener("load", () => {
-    axios.get("http://localhost:8080/api/receitas/${id}");
-    //axios.get("http://localhost:8080/api/receitas/" + 1)
+    //axios.get("http://localhost:8080/api/receitas/${id}");
+    axios.get("http://localhost:8080/api/receitas/" + 1)
     .then(res => {
         console.log(res.data)
         imagemReceita.src = "../assets/img/imagemReceita/" + res.data.imagem;
