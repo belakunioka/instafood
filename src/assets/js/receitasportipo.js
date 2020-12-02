@@ -7,7 +7,7 @@ const listaSalgadas = window.document.getElementById("receipes-list-salgadas")
 //href com link receita
 //link img receita <img src= alt=${res.data[counter].titulo}>
 
-if (window.location.href == "http://127.0.0.1:5500/src/templates/receitassalgadas.html") {
+if (window.location.href == "http://127.0.0.1:5500/receitassalgadas.html") {
     axios.get("http://localhost:8080/api/receitas/tipo?tipo=salgado")
         .then(res => {
             console.log(res.data[0].id)
