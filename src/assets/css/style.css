@@ -70,9 +70,9 @@ a:active {
 }
 
 .nav-link ul {
-    width: 90%;
+    width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -89,6 +89,12 @@ a:active {
 
 .menu-btn:hover {
     color: rgb(194, 26, 11);
+}
+
+.user-name-btn {
+    padding: 0.5em 2em !important;
+    margin-top: -4vh;
+    border-radius: 1.5em !important;
 }
 
 .btn-vermelho {

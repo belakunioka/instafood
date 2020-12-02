@@ -8,6 +8,8 @@ if (!nome) {
 
 // Se estiver logado, pega o token
 const token = localStorage.getItem('token');
+const id = localStorage.getItem('id')
+console.log(token)
 
 //Dropdown ingredients
 const dropDownIngredients = $("#ingredient-name");
@@ -161,7 +163,7 @@ $("#submit-btn").click("click", () => {
 });
 
 
-//*******************************POST************************************* */
+//*******************************POST**************************************/
 const submitBtn = document.getElementById("next-btn");
 const receipeImage = document.getElementById("receipe-image");
 
@@ -250,7 +252,7 @@ function getReceipeData() {
         rendimento: porcao + " porções",
         instrucoes: passos,
         usuario: {
-            id: 4 //modificar
+            id: Number(id)
         },
         utensilios: utensilios,
         ingredientes: ingredientes,
@@ -263,17 +265,15 @@ function getReceipeData() {
 submitBtn.addEventListener("click", () => {
     if (submitBtn.classList.contains("btn-submit-receipe")) {
         console.log(JSON.stringify(getReceipeData()))
-        axios({
-            method: 'POST',
-            dataType: 'json',
-            url: "http://localhost:8080/api/receitas",
-            body: JSON.stringify(getReceipeData()),
-            mode: "no-cors",
+
+        const data = getReceipeData();
+
+        axios.post('http://localhost:8080/api/receitas', data, {
             headers: {
-                'Authorization': `Bearer ${token}`
+                'Authorization': `Bearer ${token}`,
             }
         })
-            .then(res => console.log(res.json()))
+            .then(res => alert('Receita postada com sucesso!'))
             .catch(error => console.log(error));
 
         // receipeImage.addEventListener("change", (event) => {

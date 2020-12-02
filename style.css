@@ -68,10 +68,10 @@ main {
 }
 
 .social-icons {
-    padding-top: 0 !important;
+    padding-top: 2.5vh !important;
     height: 34vh !important;
 }
 
 .icon-social {
-    font-size: 1.9em !important;
+    font-size: 25px !important;
 }
