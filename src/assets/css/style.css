@@ -56,8 +56,8 @@ a:active {
 }
 
 .nav-bar {
-    position: fixed;
-    width: calc(100vw - 80px);
+    position: absolute;
+    width: 90vw;
     /*mudar*/
     margin-left: 80px;
     /*mudar*/
