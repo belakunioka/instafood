@@ -5,8 +5,8 @@ const Menu = (() => {
                 <ul>
                     <li><a href="/"><img src="./src/assets/img/logo.png" id="logo"</a></li>
                     <li><a href="/">MENU PRINCIPAL</a></li>
-                    <li><a href="./src/templates/receitassalgadas.html">RECEITAS SALGADAS</a></li>
-                    <li><a href="./src/templates/receitasdoces.html">RECEITAS DOCES</a></li>
+                    <li><a href="./receitassalgadas.html">RECEITAS SALGADAS</a></li>
+                    <li><a href="./receitasdoces.html">RECEITAS DOCES</a></li>
                 </ul>
     `;
 
@@ -33,7 +33,7 @@ const Menu = (() => {
     if (nome) {
         menuLateral += `
             <li><a href="/" target="_self">RECEITAS <br>SALVAS</a></li>
-            <li><a href="./src/templates/criarreceita.html" target="_self">POSTAR</a></li>
+            <li><a href="./criarreceita.html" target="_self">POSTAR</a></li>
             <li><div id="button__logout">SAIR</div></li>
         `;
     } else {
