@@ -9,7 +9,6 @@ if (!nome) {
 // Se estiver logado, pega o token
 const token = localStorage.getItem('token');
 const id = localStorage.getItem('id')
-console.log(token)
 
 //Dropdown ingredients
 const dropDownIngredients = $("#ingredient-name");
@@ -165,45 +164,8 @@ $("#submit-btn").click("click", () => {
 
 //*******************************POST**************************************/
 const submitBtn = document.getElementById("next-btn");
-const receipeImage = document.getElementById("receipe-image");
-
-//Pega o id associado ao utensilio ou tag
-function capturarValor(objeto, valor) {
-    for (let chave in objeto) {
-        if (objeto[chave] === valor && objeto.hasOwnProperty(chave)) {
-            return chave;
-        }
-    }
-}
-
-const utensiliosList = {
-    "1": "batedeira",
-    "2": "forno",
-    "3": "liquidificador",
-    "4": "fogão",
-    "5": "microondas"
-};
-
-const tagsList = {
-    "1": "sem culpa",
-    "2": "glúten free",
-    "3": "lactose free",
-    "4": "vegano",
-    "5": "vegetariano"
-};
 
 //Data
-function getCheckboxChecked(tagsOrUtensils, checkboxClass) {
-    let listOfElements = [];
-    let elements = document.querySelectorAll(checkboxClass);
-    for (let i = 0; i < elements.length; i++) {
-        if (elements[i].checked == true) {
-            listOfElements.push({ id: Number(capturarValor(tagsOrUtensils, elements[i].value)) });
-        }
-    }
-    return listOfElements;
-};
-
 
 function getIngredients() {
     let listOfIngredients = [];
@@ -264,8 +226,6 @@ function getReceipeData() {
 //Requisição
 submitBtn.addEventListener("click", () => {
     if (submitBtn.classList.contains("btn-submit-receipe")) {
-        console.log(JSON.stringify(getReceipeData()))
-
         const data = getReceipeData();
 
         axios.post('http://localhost:8080/api/receitas', data, {
@@ -273,19 +233,22 @@ submitBtn.addEventListener("click", () => {
                 'Authorization': `Bearer ${token}`,
             }
         })
+            .then((res) => () => {
+                // const image = document.getElementById("receipe-image").files[0];
+                // const formData = new FormData()
+                // formData.append("image", image);
+
+                // axios.post(`http://localhost:8080/api/receitas/receita/imagem/${res.data.id}`, formData, { 
+                // headers: {
+                //     'Authorization': `Bearer ${token}`,
+                //     'Content-Type': 'multipart/form-data' }
+                // })
+                // .then(res => alert('Imagem alterada com sucesso!'))
+                // .catch(err => alert(err.response.data.mensagem));
+            })
+
             .then(res => alert('Receita postada com sucesso!'))
             .catch(error => console.log(error));
-
-        // receipeImage.addEventListener("change", (event) => {
-        //     let image = event.target.files[0]
-
-        //     const formData = new FormData()
-        //     formData.append("image", image);
-
-        //     axios.patch(`http://localhost:8080/api/receitas/receita/imagem/${id}`, formData)
-        //         .then(res => console.log(res))
-        //         .catch(error => console.log(error));
-        // })
 
         // document.getElementById("create-receipe-form").submit()
         // window.location.href = "http://127.0.0.1:5500/index.html";

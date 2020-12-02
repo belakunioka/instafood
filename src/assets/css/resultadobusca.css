@@ -1,0 +1,27 @@
+.receipe-view-content {
+    margin: 10vh auto;
+    width: 90vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.receipe-view {
+    width: 16vw;
+    height: 20vh;
+
+    margin: 1em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #000000;
+}
+

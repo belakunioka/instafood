@@ -13,9 +13,9 @@ if (window.location.href == "http://127.0.0.1:5500/receitassalgadas.html") {
             console.log(res.data[0].id)
             for (let counter = 0; counter < res.data.length; counter++) {
                 const receita =
-                    `<a href=><li class="receipe-view">
+                    `<a href=><section class="receipe-view">
                     <p>${res.data[counter].titulo}</p>
-                    </li><a>`
+                    </section><a>`
                 listaSalgadas.insertAdjacentHTML('afterbegin', receita)
             }
         })
@@ -23,9 +23,11 @@ if (window.location.href == "http://127.0.0.1:5500/receitassalgadas.html") {
     axios.get("http://localhost:8080/api/receitas/tipo?tipo=doce")
         .then(res => {
             for (let counter = 0; counter < res.data.length; counter++) {
+                const idReceita = res.data[counter].id;
+                const nomeReceita = res.data[counter].titulo;
                 const receita =
                 `<a href=><li class="receipe-view">
-                <p>${res.data[counter].titulo}</p>
+                <p>${nomeReceita}</p>
                 </li><a>`
             listaDoces.insertAdjacentHTML('afterbegin', receita)
             }
