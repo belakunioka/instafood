@@ -66,3 +66,12 @@ main {
     font-weight: bolder;
     text-shadow: 0.1em 0.1em #000;
 }
+
+.social-icons {
+    padding-top: 0 !important;
+    height: 34vh !important;
+}
+
+.icon-social {
+    font-size: 1.9em !important;
+}
