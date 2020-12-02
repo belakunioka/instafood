@@ -4,6 +4,7 @@ h1 {
 }
 
 #create-receipe{
+    width: 90vw;
     background: #101010;
 }
 
@@ -12,8 +13,9 @@ h1 {
 }
 
 #create-receipe-form {
+    margin-top: 8vh;
     margin-left: 10vw;
-    max-width: 800px;
+    max-width: 70vw;
 }
 
 #create-receipe-form label, input, textarea {

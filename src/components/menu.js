@@ -23,9 +23,9 @@ const Menu = (() => {
 
     let menuLateral = `
         <div class="vertical-bar">
-            <div class="search-icon">
+            <div class="search-icon search-btn-home">
                 <a href="/"><i class="fa fa-th-list"></i></a>
-                <a href="./busca.html"><i class="fa fa-search"></i><a>
+                <a href="./busca.html"><i class="fa fa-search"></i></a>
                 <div class="search-icon">
                     <ul>
     `;

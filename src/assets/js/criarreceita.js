@@ -9,6 +9,22 @@ if (!nome) {
 // Se estiver logado, pega o token
 const token = localStorage.getItem('token');
 
+//Dropdown ingredients
+const dropDownIngredients = $("#ingredient-name");
+dropDownIngredients.empty();
+dropDownIngredients.append('<option value=0 selected="true" disabled>Selecione um ingrediente</option>');
+dropDownIngredients.prop('selectedIndex', 0);
+
+axios.get("http://localhost:8080/api/produtos")
+    .then(res => {
+        for (let i = 0; i < res.data.length; i++) {
+            let product = $(`
+        <option value=${res.data[i].id}>${res.data[i].nome}</option>
+        `)
+            dropDownIngredients.append(product)
+        }
+    })
+
 //Multipages form
 let form = $("#create-receipe-form");
 let currentTab = 0;
@@ -75,7 +91,7 @@ let ingredientInputs = [$("#ingredient-name"), $("#ingredient-quantity"), $("#qu
 
 //Check if it was well filled and call setIngredients
 $("#insert-ingredient").click("click", () => {
-    if (ingredientInputs[0].val() == ""
+    if (ingredientInputs[0].val() == null
         || ingredientInputs[1].val() == ""
         || ingredientInputs[2].val() == "") {
         return;
@@ -87,9 +103,9 @@ $("#insert-ingredient").click("click", () => {
 function setIngredients(arr) {
     let listOfIngredients = $(`
     <ul class="ingredient-list">
-        <li class="ingredient-name">${arr[0].val()}</li>
-        <li class="ingredient-quantity">${arr[1].val()}</li>
-        <li class="ingredient-unity">${arr[2].val()}
+        <li class="ingredient-name" value=${arr[0].val()}>${arr[0].find(":selected").text()}</li>
+        <li class="ingredient-quantity" value=${arr[1].val()}>${arr[1].val()}</li>
+        <li class="ingredient-unity" value=${arr[1].val()}>${arr[2].val()}
             <button class="remove" onclick="removeIngredient(this)" type="button">
                 <i class="fas fa-minus"></i>
             </button>
@@ -151,8 +167,8 @@ const receipeImage = document.getElementById("receipe-image");
 
 //Pega o id associado ao utensilio ou tag
 function capturarValor(objeto, valor) {
-    for(let chave in objeto) {
-        if(objeto[chave] === valor && objeto.hasOwnProperty(chave)) {
+    for (let chave in objeto) {
+        if (objeto[chave] === valor && objeto.hasOwnProperty(chave)) {
             return chave;
         }
     }
@@ -180,12 +196,12 @@ function getCheckboxChecked(tagsOrUtensils, checkboxClass) {
     let elements = document.querySelectorAll(checkboxClass);
     for (let i = 0; i < elements.length; i++) {
         if (elements[i].checked == true) {
-            listOfElements.push({ id: capturarValor(tagsOrUtensils, elements[i].value)});
+            listOfElements.push({ id: Number(capturarValor(tagsOrUtensils, elements[i].value)) });
         }
     }
-    console.log(listOfElements)
     return listOfElements;
 };
+
 
 function getIngredients() {
     let listOfIngredients = [];
@@ -196,10 +212,10 @@ function getIngredients() {
     for (let i = 0; i < ingredientsTable.length; i++) {
         let ingredient = {
             produto: {
-                nome: ingredientsName[i].innerText
+                id: ingredientsName[i].value
             },
-            quantidade: ingredientsQuantity[i].innerText,
-            unidade: ingredientsUnity[i].innerText
+            quantidade: ingredientsQuantity[i].value,
+            unidade: ingredientsUnity[i].value
         }
         listOfIngredients.push(ingredient);
     };
@@ -230,9 +246,12 @@ function getReceipeData() {
     let receita = {
         titulo: nome,
         tipo: tipo,
-        tempoPreparo: tempo,
-        rendimento: porcao,
+        tempoPreparo: tempo + " min",
+        rendimento: porcao + " porções",
         instrucoes: passos,
+        usuario: {
+            id: 4 //modificar
+        },
         utensilios: utensilios,
         ingredientes: ingredientes,
         tags: tags
@@ -246,9 +265,10 @@ submitBtn.addEventListener("click", () => {
         console.log(JSON.stringify(getReceipeData()))
         axios({
             method: 'POST',
-            dataType: 'json', 
+            dataType: 'json',
             url: "http://localhost:8080/api/receitas",
             body: JSON.stringify(getReceipeData()),
+            mode: "no-cors",
             headers: {
                 'Authorization': `Bearer ${token}`
             }
