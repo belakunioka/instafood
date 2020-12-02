@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 var inputValue = document.querySelector('.input');
-const add = document.querySelector('.add');
+const add = document.getElementById('.add');
 
 if (window.localStorage.getItem("todos") == undefined) {
     var todos = [];
@@ -23,7 +23,7 @@ class item {
         input.type = "text";
         input.disabled = true;
         input.value = name;
-        input.classList.add('item_input');
+        input.setAttribute("class", "ingredient-item-search item_input")
 
         var edit = document.createElement('button');
         edit.setAttribute('type', 'button');
@@ -64,7 +64,6 @@ class item {
     }
 }
 
-add.addEventListener('click', check);
 window.addEventListener('keydown', (e) => {
     if (e.which == 13) {
         check();
@@ -84,3 +83,61 @@ function check() {
 for (var v = 0; v < todos.length; v++) {
     new item(todos[v]);
 }
+
+
+//Requisição buscar receitas
+
+//Carrega lista de ingredientes
+let ingredientsList = {}
+
+axios.get("http://localhost:8080/api/produtos")
+    .then(res => {
+        for (let i = 0; i < res.data.length; i++) {
+            let id = res.data[i].id
+            let nome = res.data[i].nome.toLowerCase()
+            ingredientsList[id] = nome
+        }
+    })
+
+//Captura id dos ingredientes buscados
+function getIngredientsSearch() {
+    let listOfIngredients = [];
+    let selectedIngredients = document.querySelectorAll(".ingredient-item-search")
+    for (let i = 0; i < selectedIngredients.length; i++) {
+        let ingredient = capturarValor(ingredientsList, selectedIngredients[i].value.toLowerCase())
+        if (ingredient != undefined) {
+            listOfIngredients.push(ingredient)
+        }
+    }
+    return listOfIngredients;
+};
+
+//Botão que faz requisição
+
+const exibirReceitas = document.getElementById('exibir-receitas');
+exibirReceitas.addEventListener("click", () => {
+
+    let receitasEncontradas = []
+
+    const data = {
+        "produtos": getIngredientsSearch(),
+        "utensilios": getCheckboxCheckedSearch(utensiliosList, ".checkbox-utensil"),
+        "tags": getCheckboxCheckedSearch(tagsList, ".checkbox-tag"),
+        "pagina": 1,
+        "tamanho": 1
+    }
+
+    axios.post("http://localhost:8080/api/receitas/busca", data)
+        .then(res => {
+            for (let i = 0; i < res.data.length; i++) {
+                let idReceita = res.data[i].id;
+                let nomeReceita = res.data[i].titulo;
+                receitasEncontradas.push([idReceita, nomeReceita])
+            }
+            window.localStorage.setItem("receitasEncontradas", JSON.stringify(receitasEncontradas));
+            document.getElementById("search-form").submit()
+            window.location.href = "http://127.0.0.1:5500/resultadodabusca.html"
+
+        })
+        .catch(err => console.log(err))
+})
