@@ -12,10 +12,11 @@ if (window.location.href == "http://127.0.0.1:5500/receitassalgadas.html") {
         .then(res => {
             console.log(res.data[0].id)
             for (let counter = 0; counter < res.data.length; counter++) {
+                const idReceita = res.data[counter].id;
                 const receita =
-                    `<a href=><section class="receipe-view">
-                    <p>${res.data[counter].titulo}</p>
-                    </section><a>`
+                    `<div href=><section class="receipe-view">
+                    <p id="receita_item" data-receita-id="${idReceita}">${res.data[counter].titulo}</p>
+                    </section><div>`
                 listaSalgadas.insertAdjacentHTML('afterbegin', receita)
             }
         })
@@ -26,9 +27,9 @@ if (window.location.href == "http://127.0.0.1:5500/receitassalgadas.html") {
                 const idReceita = res.data[counter].id;
                 const nomeReceita = res.data[counter].titulo;
                 const receita =
-                `<a href=><li class="receipe-view">
-                <p>${nomeReceita}</p>
-                </li><a>`
+                `<div href=><li class="receipe-view">
+                <p id="receita_item" data-receita-id="${idReceita}">${nomeReceita}</p>
+                </li><div>`
             listaDoces.insertAdjacentHTML('afterbegin', receita)
             }
         })

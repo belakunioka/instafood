@@ -21,10 +21,11 @@ const modoPreparo = document.getElementById("modoPreparo");
 
 window.addEventListener("load", () => {
     //axios.get("http://localhost:8080/api/receitas/${id}");
-    axios.get("http://localhost:8080/api/receitas/" + 1)
+    const receitaId = window.localStorage.getItem('receitaId');
+    axios.get(`http://localhost:8080/api/receitas/${receitaId}`)
     .then(res => {
         console.log(res.data)
-        imagemReceita.src = "../assets/img/imagemReceita/" + res.data.imagem;
+        imagemReceita.src = `http://localhost:8080/img/receitas/${res.data.imagem}`;
         tituloReceita.textContent = res.data.titulo;
         tempoPreparo.textContent = res.data.tempoPreparo;
         autorReceita.textContent = res.data.usuario.nome;
