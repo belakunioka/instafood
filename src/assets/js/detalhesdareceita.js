@@ -21,7 +21,8 @@ const modoPreparo = document.getElementById("modoPreparo");
 
 window.addEventListener("load", () => {
     //axios.get("http://localhost:8080/api/receitas/${id}");
-    axios.get("http://localhost:8080/api/receitas/" + 1)
+    const receitaId = window.localStorage.getItem('receitaId');
+    axios.get(`http://localhost:8080/api/receitas/${receitaId}`)
     .then(res => {
         console.log(res.data)
         imagemReceita.src = "../assets/img/imagemReceita/" + res.data.imagem;
