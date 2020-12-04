@@ -33,6 +33,15 @@ p {
     color: #FFFFFF;
 }
 
+#create-receipe-form textarea:focus {
+    color: #FFFFFF !important;
+}
+
+#create-receipe-form textarea:hover {
+    color: #FFFFFF !important;
+}
+
+
 #alert {
     color: rgb(194, 26, 11);
 }
