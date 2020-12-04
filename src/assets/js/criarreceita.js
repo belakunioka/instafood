@@ -224,33 +224,63 @@ function getReceipeData() {
 };
 
 //Requisição
-submitBtn.addEventListener("click", () => {
+submitBtn.addEventListener("click", async () => {
+    console.log(getReceipeData());
     if (submitBtn.classList.contains("btn-submit-receipe")) {
         const data = getReceipeData();
 
+        try {
+            const receita = await axios.post('http://localhost:8080/api/receitas', data, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                }
+            })
+            .then(res => res.data);
+            if (receita) {
+                const image = document.getElementById("receipe-image").files[0];
+                const fd = new FormData();
+                console.log(fd);
+                fd.append('imagem', image);
+                
+                await axios.post(`http://localhost:8080/api/receitas/receita/imagem/${receita.id}`, fd, { 
+                    headers: {
+                         'Authorization': `Bearer ${token}`,
+                         'Content-Type': 'multipart/form-data' }
+                     })
+                     .then(res => alert('Imagem alterada com sucesso!'))
+                     .catch(err => console.log(err.response));
+            }
+        } catch (err) {
+            console.log(err);
+        }
+
+
+        /*
         axios.post('http://localhost:8080/api/receitas', data, {
             headers: {
                 'Authorization': `Bearer ${token}`,
             }
         })
             .then((res) => () => {
-                // const image = document.getElementById("receipe-image").files[0];
-                // const formData = new FormData()
-                // formData.append("image", image);
+                const image = document.getElementById("receipe-image").files[0];
+                const formData = new FormData()
+                formData.append("image", image);
 
-                // axios.post(`http://localhost:8080/api/receitas/receita/imagem/${res.data.id}`, formData, { 
-                // headers: {
-                //     'Authorization': `Bearer ${token}`,
-                //     'Content-Type': 'multipart/form-data' }
-                // })
-                // .then(res => alert('Imagem alterada com sucesso!'))
-                // .catch(err => alert(err.response.data.mensagem));
+                axios.post(`http://localhost:8080/api/receitas/receita/imagem/${res.data.id}`, formData, { 
+                headers: {
+                     'Authorization': `Bearer ${token}`,
+                     'Content-Type': 'multipart/form-data' }
+                 })
+                 .then(res => alert('Imagem alterada com sucesso!'))
+                 .catch(err => alert(err.response.data.mensagem));
             })
-
             .then(res => alert('Receita postada com sucesso!'))
+            .then(res => {
+                document.getElementById("create-receipe-form").submit()
+                window.location.href = "http://127.0.0.1:5500/index.html";
+            })
             .catch(error => console.log(error));
-
-        // document.getElementById("create-receipe-form").submit()
-        // window.location.href = "http://127.0.0.1:5500/index.html";
+*/
+        
     }
 })
