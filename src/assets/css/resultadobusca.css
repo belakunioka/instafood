@@ -22,6 +22,10 @@
     border-radius: 8px;
     font-size: 1.2em;
     text-align: center;
-    background-color: #000000;
+    background-color: #FFFFFF;
 }
 
+.receipe-view:hover {
+    opacity: 0.8;
+    font-weight: bold;
+}
